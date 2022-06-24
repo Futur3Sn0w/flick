@@ -1,0 +1,132 @@
+.grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: var(--mainGridBackColor);
+    backdrop-filter: blur(20px);
+    border-radius: 0 10px 10px 0;
+    color: var(--mainGridFontColor);
+
+    width: fit-content;
+    height: 100vh;
+    padding-bottom: 15px;
+}
+
+.grid::before{
+    content: "Icons";
+    font-size: 30px;
+    font-weight: 600;
+
+    background-color: var(--mainGridTitleBackColor);
+    backdrop-filter: blur(20px);
+
+    position: sticky;
+    z-index: 2;
+    top: 0;
+
+    width: 115px;
+
+    padding: 20px 0 10px 15px;
+}
+
+.icon{
+    min-height: 100px;
+    width: 100px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 3px solid transparent;
+    background-color: var(--mainGridIconBackColor);
+    border-radius: 5px;
+
+    position: relative;
+
+    /* background-position: 50% 35%; */
+    /* background-size: 53%; */
+
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.icon:hover{
+    border: 3px solid var(--mainGridIconBackColor);
+}
+
+.icon::after{
+    content: attr(data-iconName);
+    font-size: 12px;
+    font-family: "Segoe UI Variable Small";
+
+    width: 100%;
+
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+
+    DISPLAY: NONE;
+}
+
+.icon:first-of-type{
+    display: none;
+}
+
+.selectedIcon{
+    background-color: purple;
+}
+
+.largePreview{
+    height: 256px;
+    aspect-ratio: 1/1;
+
+    box-sizing: content-box;
+
+
+    background-color: var(--heroIconPlateColor);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* background-position: 50% 35%; */
+    /* background-size: 53%; */
+
+    background-size: 256px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    padding: 40px;
+}
+
+.largePreview::after{
+    content: attr(data-iconName);
+
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: fit-content;
+    padding: 5px 10px;
+    text-align: center;
+
+    font-weight: 500;
+    background-color: var(--mainGridFontColorReverse);
+    backdrop-filter: blur(20px);
+    border-radius: 4px;
+
+    DISPLAY: NONE;
+}
