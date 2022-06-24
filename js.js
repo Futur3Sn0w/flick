@@ -11,12 +11,12 @@ var gridBox = document.getElementById('grid'),
 
     icons.forEach(function (iconInd, index) {
     clone = iconBox.cloneNode();
-    clone.setAttribute('style', 'background-image: url("/Icons/' + iconInd + '.png")');
+    clone.setAttribute('style', 'background-image: url("Icons/' + iconInd + '.png")');
     clone.setAttribute('data-iconName', iconInd);
     gridBox.appendChild(clone);
 
     clone.onclick = function () {
-        previewBox.setAttribute('style', 'background-image: url("/Icons/' + iconInd + '.png")');
+        previewBox.setAttribute('style', 'background-image: url("Icons/' + iconInd + '.png")');
         previewBox.setAttribute('data-iconName', clone.getAttribute('data-iconName'));
     };
 
