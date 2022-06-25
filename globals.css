@@ -42,11 +42,15 @@ body{
         --backgroundImage: url("https://i.postimg.cc/knyRvbVv/Gradient-Light.png");
 
         --mainGridBackColor: rgba(0, 0, 0, 0.2);
+
         --mainGridFontColor: black;
         --mainGridFontColorReverse: white;
+
         --mainGridIconBackColor: rgba(255, 255, 255, 0.5);
         --mainGridIconBackColorHov: rgba(255, 255, 255, 0.8);
-        --mainGridIconSelectedColor: rgb(224, 224, 224);
+        --mainGridIconSelectedColor: rgb(255, 255, 255);
+        --mainGridIconSelectedFontColor: black;
+
         --mainGridTitleBackColor: rgb(239, 239, 239);
         --mainGridTitleFontColor: #333;
 
@@ -59,11 +63,15 @@ body{
         --backgroundImage: url("https://i.postimg.cc/bvLPS8w1/Gradient-Dark.png");
 
         --mainGridBackColor: rgba(60, 60, 60, 0.5);
+
         --mainGridFontColor: white;
         --mainGridFontColorReverse: black;
+
         --mainGridIconBackColor: rgb(255, 255, 255, .1);
-        --mainGridIconBackColorHov: rgb(255, 255, 255, .3);
+        --mainGridIconBackColorHov: rgb(255, 255, 255, .2);
         --mainGridIconSelectedColor: rgb(255, 255, 255, .4);
+        --mainGridIconSelectedFontColor: white;
+
         --mainGridTitleBackColor: rgb(56, 56, 56);
         --mainGridTitleFontColor: #EEE;
 

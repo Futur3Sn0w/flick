@@ -332,6 +332,8 @@ const icons = [
 ]
 
 var indxAmt = icons.length;
+var gt = document.getElementById('gt');
+  gt.innerText = indxAmt + " icons";
 var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
 
@@ -348,14 +350,11 @@ var gridBox = document.getElementById('grid'),
     gridBox.appendChild(clone);
 
     clone.onclick = function () {
-        previewBox.style.display = "flex";
-        // alert('background-image: url("iconimgs/' + iconInd["path"] + '")');
         previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
         localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
         localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '")');
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
-        // iconBox.setAttribute("class", "icon selected");
         infoBox.innerText = iconInd["friendlyName"];
 
         if (iconInd['darkMode'] === "no") {
@@ -379,3 +378,13 @@ var gridBox = document.getElementById('grid'),
   }
 
 });
+
+window.onclick = (e) => {
+  if (e.target.classList.contains('icon')) {
+  const active = document.querySelector('.selected');
+  if(active){
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
+}
+}

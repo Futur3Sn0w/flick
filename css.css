@@ -12,62 +12,76 @@
     left: 0;
     top: 0;
 
-    background-color: var(--mainGridBackColor);
+    background-color: transparent;
     backdrop-filter: blur(20px);
-    border-radius: 0 10px 10px 0;
     color: var(--mainGridFontColor);
 
-    width: 45px;
+    width: 48px;
     height: 100vh;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 
-    transition: width .2s;
+    transition: width .2s, background-color .2s;
 }
 
 .grid:hover{
     width: 180px;
-}
-
-.grid:hover .gridTitle{
-    color: var(--mainGridTitleFontColor);
+    background-color: var(--mainGridBackColor);
+    border-right: 1px solid var(--mainGridBackColor);
 }
 
 .gridTitle{
     font-size: 30px;
     font-weight: 600;
 
+    display: flex;
+    align-items: flex-end;
+    padding-left: 7px;
+
+    box-sizing: content-box !important;
+
     background-color: var(--mainGridTitleBackColor);
-    color: transparent;
+    color: var(--mainGridTitleFontColor);
 
     position: sticky;
     z-index: 2;
     top: 0;
 
-    width: 100%;
+    width: 180px;
+    min-height: 55px;
+    height: 0;
+    overflow: hidden;
 
-    padding: 15px 0 5px 10px;
-    transition: color .2s;
+    transition: color .2s, min-height .3s, padding .2s;
 }
 
 .icon{
     min-height: 40px;
-    width: 180px;
+    max-width: 180px;
 
     overflow: hidden;
     cursor: pointer;
 
-    border: 3px solid transparent;
+    appearance: none;
+
     background-color: var(--mainGridIconBackColor);
-    /* border-radius: 5px; */
+    color: var(--mainGridFontColor);
+    transition: opacity .3s;
+    border-radius: 5px;
 
     position: relative;
+
+    opacity: .7;
 
     /* background-position: 50% 35%; */
     /* background-size: 53%; */
 
-    background-size: auto 80%;
+    background-size: auto 75%;
     background-repeat: no-repeat;
     background-position: 5px 50%;
+}
+
+.grid:hover .icon{
+    opacity: 1;
 }
 
 .icon:hover{
@@ -78,13 +92,14 @@
     content: attr(data-iconName);
     font-size: 12px;
     font-family: "Segoe UI Variable Small";
+    font-weight: inherit;
 
     width: 115px;
     overflow: hidden;
     white-space: nowrap;
 
     position: absolute;
-    bottom: 10px;
+    bottom: 13px;
     left: 42px;
     text-align: left;
     text-overflow: ellipsis;
@@ -92,12 +107,14 @@
     /* DISPLAY: NONE; */
 }
 
-.icon:nth-of-type(2){
+.icon:nth-of-type(1){
     display: none;
 }
 
 .selected{
-    background-color: purple !important;
+    background-color: var(--mainGridIconSelectedColor) !important;
+    color: var(--mainGridIconSelectedFontColor) !important;
+    font-weight: 700;
 }
 
 .largePreview{
