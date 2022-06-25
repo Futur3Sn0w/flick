@@ -355,7 +355,7 @@ var gridBox = document.getElementById('grid'),
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
         // iconBox.setAttribute("class", "icon selected");
-        infoBox.innerText = iconInd["path"];
+        infoBox.innerText = iconInd["friendlyName"];
 
         if (iconInd['darkMode'] === "no") {
           darkToggle.style.display = "none";
