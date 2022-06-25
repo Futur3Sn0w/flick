@@ -378,7 +378,3 @@ var gridBox = document.getElementById('grid'),
   }
 
 });
-
-window.onload = function () {
-  document.getElementById('').style.opacity = "0";
-}
