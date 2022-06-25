@@ -8,6 +8,8 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
 *{
@@ -20,12 +22,14 @@ body{
     :root{
         --backgroundImage: url("https://i.postimg.cc/knyRvbVv/Gradient-Light.png");
 
-        --mainGridBackColor: rgba(255, 255, 255, .5);
+        --mainGridBackColor: rgba(0, 0, 0, 0.1);
         --mainGridFontColor: black;
         --mainGridFontColorReverse: white;
-        --mainGridIconBackColor: white;
+        --mainGridIconBackColor: rgba(255, 255, 255, 0.5);
+        --mainGridIconBackColorHov: rgba(255, 255, 255, 0.8);
         --mainGridIconSelectedColor: rgb(224, 224, 224);
-        --mainGridTitleBackColor: rgb(216, 216, 216);
+        --mainGridTitleBackColor: rgb(239, 239, 239);
+        --mainGridTitleFontColor: #333;
 
         --heroIconPlateColor: rgba(255, 255, 255, .8);
     }
@@ -35,12 +39,14 @@ body{
     :root{
         --backgroundImage: url("https://i.postimg.cc/bvLPS8w1/Gradient-Dark.png");
 
-        --mainGridBackColor: rgba(48, 48, 48, 0.5);
+        --mainGridBackColor: rgba(60, 60, 60, 0.5);
         --mainGridFontColor: white;
         --mainGridFontColorReverse: black;
-        --mainGridIconBackColor: rgb(255, 255, 255, .2);
+        --mainGridIconBackColor: rgb(255, 255, 255, .1);
+        --mainGridIconBackColorHov: rgb(255, 255, 255, .3);
         --mainGridIconSelectedColor: rgb(255, 255, 255, .4);
-        --mainGridTitleBackColor: black;
+        --mainGridTitleBackColor: rgb(56, 56, 56);
+        --mainGridTitleFontColor: #EEE;
 
         --heroIconPlateColor: rgba(48, 48, 48, .5);
     }
