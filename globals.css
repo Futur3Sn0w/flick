@@ -12,6 +12,21 @@ body{
     overflow: hidden;
 }
 
+.versionInfo{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--mainGridFontColor);
+    opacity: .4;
+
+    user-select: none;
+    pointer-events: none;
+}
+
 *{
     box-sizing: border-box;
 
