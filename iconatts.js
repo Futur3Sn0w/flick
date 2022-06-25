@@ -337,6 +337,7 @@ var darkToggle = document.getElementById('darkToggle');
 
 var gridBox = document.getElementById('grid'),
     iconBox = document.getElementById('icon'),
+    infoBox = document.getElementById('iconInfo'),
     clone;
 
     icons.forEach(function (iconInd, index) {
@@ -354,6 +355,7 @@ var gridBox = document.getElementById('grid'),
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
         // iconBox.setAttribute("class", "icon selected");
+        infoBox.innerText = iconInd["path"];
 
         if (iconInd['darkMode'] === "no") {
           darkToggle.style.display = "none";
@@ -377,3 +379,6 @@ var gridBox = document.getElementById('grid'),
 
 });
 
+window.onload = function () {
+  document.getElementById('').style.opacity = "0";
+}

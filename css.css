@@ -160,15 +160,29 @@
     right: 50%;
     top: 50%;
     transform: translate(95%, -50%);
+    opacity: 0;
 
-    transition: transform .2s;
+    transition: .3s transform 1s, .3s opacity 1s;
 
-    DISPLAY: NONE;
+    DISPLAY: FLEX;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    color: var(--mainGridFontColor);
 }
 
 .largePreview:hover ~ .iconInfo,
 .iconInfo:hover{
     transform: translate(190%, -50%);
+    opacity: 1;
+
+    transition: .3s transform .5s, .3s opacity .5s;
+}
+
+.iconInfo::after{
+    content: "ALPHA"
 }
 
 .darkToggle{
