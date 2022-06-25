@@ -331,6 +331,10 @@ const icons = [
       }
 ]
 
+window.onload = function () {
+  previewBox.style.display = "none";
+}
+
 var indxAmt = icons.length;
 var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
@@ -348,6 +352,7 @@ var gridBox = document.getElementById('grid'),
     gridBox.appendChild(clone);
 
     clone.onclick = function () {
+        previewBox.style.display = "flex";
         // alert('background-image: url("iconimgs/' + iconInd["path"] + '")');
         previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
         localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
