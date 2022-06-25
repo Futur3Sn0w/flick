@@ -287,13 +287,13 @@ var gridBox = document.getElementById('grid'),
 
     icons.forEach(function (iconInd, index) {
     clone = iconBox.cloneNode();
-    clone.setAttribute('style', 'background-image: url("/icons/' + iconInd["path"] + '")');
+    clone.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
     clone.setAttribute('data-iconName', iconInd["friendlyName"]);
     gridBox.appendChild(clone);
 
     clone.onclick = function () {
-        // alert('background-image: url("icons/' + iconInd["path"] + '")');
-        previewBox.setAttribute('style', 'background-image: url("/icons/' + iconInd["path"] + '")');
+        // alert('background-image: url("iconimgs/' + iconInd["path"] + '")');
+        previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         // iconBox.setAttribute("class", "icon selected");
     };
