@@ -169,3 +169,26 @@
 .iconInfo:hover{
     transform: translate(190%, -50%);
 }
+
+.darkToggle{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: white;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -20px;
+    right: -20px;
+
+    transition: transform .3s;
+
+    display: none;
+}
+
+.darkToggle:active{
+    transform: rotate(180deg);
+}

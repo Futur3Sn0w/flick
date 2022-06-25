@@ -22,7 +22,7 @@ body{
     :root{
         --backgroundImage: url("https://i.postimg.cc/knyRvbVv/Gradient-Light.png");
 
-        --mainGridBackColor: rgba(0, 0, 0, 0.1);
+        --mainGridBackColor: rgba(0, 0, 0, 0.2);
         --mainGridFontColor: black;
         --mainGridFontColorReverse: white;
         --mainGridIconBackColor: rgba(255, 255, 255, 0.5);
