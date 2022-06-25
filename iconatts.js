@@ -331,10 +331,6 @@ const icons = [
       }
 ]
 
-window.onload = function () {
-  previewBox.style.display = "none";
-}
-
 var indxAmt = icons.length;
 var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
