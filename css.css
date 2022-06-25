@@ -141,6 +141,7 @@
 
     font-weight: 500;
     background-color: var(--mainGridFontColorReverse);
+    color: var(--mainGridFontColor);
     border-radius: 4px;
 
     /* DISPLAY: NONE; */

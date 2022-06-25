@@ -18,9 +18,13 @@ body{
     top: 10px;
     z-index: 1000;
 
+    padding: 3px 5px;
+    border-radius: 100px;
+
     font-size: 15px;
     font-weight: 500;
     color: var(--mainGridFontColor);
+    background-color: var(--mainGridBackColor);
     opacity: .4;
 
     user-select: none;
