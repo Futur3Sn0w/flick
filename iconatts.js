@@ -24,14 +24,14 @@ const icons = [
         "pathID": "camera",
         "darkMode": "no",
         "friendlyName": "Camera",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "1"
       }, 
       {
         "pathID": "clipchamp",
         "darkMode": "no",
         "friendlyName": "ClipChamp",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -45,7 +45,7 @@ const icons = [
         "pathID": "familysafetymonitor",
         "darkMode": "no",
         "friendlyName": "Family Safety Monitor",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -59,7 +59,7 @@ const icons = [
         "pathID": "explorer",
         "darkMode": "no",
         "friendlyName": "File Explorer",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "3"
       }, 
       {
@@ -73,28 +73,28 @@ const icons = [
         "pathID": "getstarted",
         "darkMode": "no",
         "friendlyName": "Get Started",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "journal",
         "darkMode": "no",
         "friendlyName": "Journal",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "livecaptions",
         "darkMode": "no",
         "friendlyName": "Live Captions",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "magnify",
         "darkMode": "no",
         "friendlyName": "Magnifier",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -115,7 +115,7 @@ const icons = [
         "pathID": "mediaplayer",
         "darkMode": "no",
         "friendlyName": "Media Player",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "2"
       }, 
       {
@@ -136,21 +136,21 @@ const icons = [
         "pathID": "store_light",
         "darkMode": "store_dark",
         "friendlyName": "Microsoft Store",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "1"
       }, 
       {
         "pathID": "microsofttodo",
         "darkMode": "no",
         "friendlyName": "Microsoft To Do",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "microsoftedge",
         "darkMode": "no",
         "friendlyName": "Microsoft Edge",
-        "firstSeen": "10X", 
+        "firstSeen": "2019", 
         "hasAlts": "0"
       }, 
       {
@@ -164,21 +164,21 @@ const icons = [
         "pathID": "mixedrealityportal",
         "darkMode": "no",
         "friendlyName": "Mixed Reality Portal",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "moviesandtv",
         "darkMode": "no",
         "friendlyName": "Movies & TV",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "2"
       }, 
       {
         "pathID": "narrator",
         "darkMode": "no",
         "friendlyName": "Narrator",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -192,21 +192,21 @@ const icons = [
         "pathID": "office",
         "darkMode": "no",
         "friendlyName": "Office",
-        "firstSeen": "10X", 
+        "firstSeen": "2018", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "osk",
         "darkMode": "no",
         "friendlyName": "On-Screen Keyboard",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "d3dmapping",
         "darkMode": "no",
         "friendlyName": "OpenCL™ and OpenGL® Compatibility Pack",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
@@ -234,7 +234,7 @@ const icons = [
         "pathID": "phonelink",
         "darkMode": "no",
         "friendlyName": "Phone Link",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "1"
       }, 
       {
@@ -248,42 +248,42 @@ const icons = [
         "pathID": "powerautomate",
         "darkMode": "no",
         "friendlyName": "Power Automate",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "powerbidesktop",
         "darkMode": "no",
         "friendlyName": "Power BI Desktop",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "powertoys",
         "darkMode": "no",
         "friendlyName": "PowerToys",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "printqueueactioncenter",
         "darkMode": "no",
         "friendlyName": "Print Management",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "quickassist",
         "darkMode": "no",
         "friendlyName": "Quick Assist",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "remotedesktop",
         "darkMode": "no",
         "friendlyName": "Remote Desktop Connection",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
@@ -297,7 +297,7 @@ const icons = [
         "pathID": "snippingtool",
         "darkMode": "no",
         "friendlyName": "Snipping Tool",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "1"
       }, 
       {
@@ -318,21 +318,21 @@ const icons = [
         "pathID": "surface",
         "darkMode": "no",
         "friendlyName": "Surface",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "teams",
         "darkMode": "no",
         "friendlyName": "Teams",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "terminal",
         "darkMode": "no",
         "friendlyName": "Terminal",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
@@ -346,14 +346,14 @@ const icons = [
         "pathID": "videoeditor",
         "darkMode": "no",
         "friendlyName": "Video Editor",
-        "firstSeen": "10X", 
+        "firstSeen": "10", 
         "hasAlts": "0"
       }, 
       {
         "pathID": "voiceaccess",
         "darkMode": "no",
         "friendlyName": "Voice Access",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -381,7 +381,7 @@ const icons = [
         "pathID": "linuxsubsystem",
         "darkMode": "no",
         "friendlyName": "Windows Subsystem for Linux Preview",
-        "firstSeen": "10X", 
+        "firstSeen": "11", 
         "hasAlts": "0"
       }, 
       {
@@ -407,6 +407,7 @@ var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
 
 var altContainer = document.getElementById('altBox');
+var allAlts = document.querySelectorAll('.alt');
 var ac1 = document.getElementById('alt1');
 var ac2 = document.getElementById('alt2');
 var ac3 = document.getElementById('alt3');
@@ -426,6 +427,16 @@ var gridBox = document.getElementById('grid'),
     clone.setAttribute('data-hasAlts', iconInd['hasAlts']);
     gridBox.appendChild(clone);
 
+    allAlts.forEach(function (altIcn) {
+      altIcn.onclick = function (x) {
+        previewBox.setAttribute('altShowing', "y");
+        localStorage.setItem('currentIcon', previewBox.style.backgroundImage);
+        previewBox.style.backgroundImage = altIcn.style.backgroundImage;
+        altIcn.style.backgroundImage = localStorage.getItem('currentIcon');
+        // alert(localStorage.getItem('currentIcon') + " " + previewBox.getAttribute('altShowing'));
+      }
+    })
+
     clone.onclick = function () {
         previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
         localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
@@ -434,6 +445,8 @@ var gridBox = document.getElementById('grid'),
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
 
         document.getElementById('moreIconName').innerText = iconInd["friendlyName"];
+        document.getElementById('moreAltAmt').innerText = iconInd['hasAlts'] + " revision(s)"
+        document.getElementById('moreFirstSeen').innerText = "First seen: " + iconInd['firstSeen'];
 
         moreBtn.style.display = "flex";
 
@@ -450,6 +463,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "none";
           ac4.style.display = "none";
           ac5.style.display = "none";
+          document.getElementById('moreAltAmt').style.display = "flex";
         } else if (iconInd['hasAlts'] === "2"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -457,6 +471,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "none";
           ac4.style.display = "none";
           ac5.style.display = "none";
+          document.getElementById('moreAltAmt').style.display = "flex";
         } else if (iconInd['hasAlts'] === "3"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -464,6 +479,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "flex";
           ac4.style.display = "none";
           ac5.style.display = "none";
+          document.getElementById('moreAltAmt').style.display = "flex";
         } else if (iconInd['hasAlts'] === "4"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -471,6 +487,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "flex";
           ac4.style.display = "flex";
           ac5.style.display = "none";
+          document.getElementById('moreAltAmt').style.display = "flex";
         } else if (iconInd['hasAlts'] === "5"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -478,6 +495,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "flex";
           ac4.style.display = "flex";
           ac5.style.display = "flex";
+          document.getElementById('moreAltAmt').style.display = "flex";
         } else if (iconInd['hasAlts'] === "0"){
           altContainer.style.display = "none";
           ac1.style.display = "none";
@@ -485,6 +503,7 @@ var gridBox = document.getElementById('grid'),
           ac3.style.display = "none";
           ac4.style.display = "none";
           ac5.style.display = "none";
+          document.getElementById('moreAltAmt').style.display = "none";
         }
 
         if (iconInd['darkMode'] === "no") {

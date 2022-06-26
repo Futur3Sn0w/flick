@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="globals.css">
     <script src="https://kit.fontawesome.com/a1fc6f0f3a.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#fc007b">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="context-menu" id="context-menu">
         <div class="cmItem cmItem1" id="changeBgBtn">Change background</div>
         <div class="cmItem cmItem2 disabledCmItem">Dummy option</div>
     </div>
-    <div class="versionInfo">v0.7.0</div>
+    <div class="versionInfo">v0.7.1</div>
     <div class="hoverBtn darkToggle" id="darkToggle">
         <i class="fa-solid fa-circle-half-stroke"></i>
     </div>
@@ -33,8 +43,12 @@
     </div>
     <div class="iconInfo" id="iconInfo" data-menuShowing="n">
         <div class="iconInfoContent" id="iconInfoContent">
-            <div id="moreIconName"></div>
-            <div id="moreIconClrMd">Light</div>
+            <div class="head">
+                <div id="moreIconName"></div>
+                <div id="moreIconClrMd">Light</div>
+            </div>
+            <div id="moreAltAmt">5 alts</div>
+            <div id="moreFirstSeen">First seen: 10X</div>
         </div>
     </div>
 
