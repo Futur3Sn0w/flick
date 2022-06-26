@@ -1,333 +1,402 @@
 const icons = [
       {
-        "path": "calculator.png",
-        "darkMode": "no",
-        "friendlyName": "Calculator",
-        "firstSeen": "10X"
+        "pathID": "bing_light",
+        "darkMode": "bing_dark",
+        "friendlyName": "Bing",
+        "firstSeen": "2019", 
+        "hasAlts": "0"
       },
       {
-        "path": "calendar.png",
+        "pathID": "calculator",
+        "darkMode": "no",
+        "friendlyName": "Calculator",
+        "firstSeen": "10X", 
+        "hasAlts": "1"
+      },
+      {
+        "pathID": "calendar",
         "darkMode": "no",
         "friendlyName": "Calendar",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "2"
       }, 
       {
-        "path": "camera.png",
+        "pathID": "camera",
         "darkMode": "no",
         "friendlyName": "Camera",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "clipchamp.png",
+        "pathID": "clipchamp",
         "darkMode": "no",
         "friendlyName": "ClipChamp",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "clock.png",
+        "pathID": "clock",
         "darkMode": "no",
         "friendlyName": "Clock",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "familysafetymonitor.png",
+        "pathID": "familysafetymonitor",
         "darkMode": "no",
         "friendlyName": "Family Safety Monitor",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "feedbackhub.png",
+        "pathID": "feedbackhub",
         "darkMode": "no",
         "friendlyName": "Feedback Hub",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "fileexplorer.png",
+        "pathID": "explorer",
         "darkMode": "no",
         "friendlyName": "File Explorer",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "3"
       }, 
       {
-        "path": "gethelp.png",
+        "pathID": "gethelp",
         "darkMode": "no",
         "friendlyName": "Get Help",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "getstarted.png",
+        "pathID": "getstarted",
         "darkMode": "no",
         "friendlyName": "Get Started",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "journal.png",
+        "pathID": "journal",
         "darkMode": "no",
         "friendlyName": "Journal",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "livecaptions.png",
+        "pathID": "livecaptions",
         "darkMode": "no",
         "friendlyName": "Live Captions",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "magnify.png",
+        "pathID": "magnify",
         "darkMode": "no",
         "friendlyName": "Magnifier",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "mail.png",
+        "pathID": "mail",
         "darkMode": "no",
         "friendlyName": "Mail",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "2"
       }, 
       {
-        "path": "maps.png",
+        "pathID": "maps",
         "darkMode": "no",
         "friendlyName": "Maps",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "mediaplayer.png",
+        "pathID": "mediaplayer",
         "darkMode": "no",
         "friendlyName": "Media Player",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "2"
       }, 
       {
-        "path": "messaging.png",
+        "pathID": "messaging",
         "darkMode": "no",
         "friendlyName": "Messaging",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "microsoftnews.png",
+        "pathID": "microsoftnews",
         "darkMode": "no",
         "friendlyName": "Microsoft News",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "microsoftstore_light.png",
-        "darkMode": "microsoftstore_dark.png",
+        "pathID": "store_light",
+        "darkMode": "store_dark",
         "friendlyName": "Microsoft Store",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "microsofttodo.png",
+        "pathID": "microsofttodo",
         "darkMode": "no",
         "friendlyName": "Microsoft To Do",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "microsoftedge.png",
+        "pathID": "microsoftedge",
         "darkMode": "no",
         "friendlyName": "Microsoft Edge",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "mixedrealityportal.png",
+        "pathID": "whiteboard",
+        "darkMode": "no",
+        "friendlyName": "Microsoft Whiteboard",
+        "firstSeen": "10X", 
+        "hasAlts": "2"
+      }, 
+      {
+        "pathID": "mixedrealityportal",
         "darkMode": "no",
         "friendlyName": "Mixed Reality Portal",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "moviesandtv.png",
+        "pathID": "moviesandtv",
         "darkMode": "no",
         "friendlyName": "Movies & TV",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "2"
       }, 
       {
-        "path": "narrator.png",
+        "pathID": "narrator",
         "darkMode": "no",
         "friendlyName": "Narrator",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "notepad.png",
+        "pathID": "notepad",
         "darkMode": "no",
         "friendlyName": "Notepad",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "office.png",
+        "pathID": "office",
         "darkMode": "no",
         "friendlyName": "Office",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "osk.png",
+        "pathID": "osk",
         "darkMode": "no",
         "friendlyName": "On-Screen Keyboard",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "d3dmapping.png",
+        "pathID": "d3dmapping",
         "darkMode": "no",
         "friendlyName": "OpenCL™ and OpenGL® Compatibility Pack",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "paint.png",
+        "pathID": "paint",
         "darkMode": "no",
         "friendlyName": "Paint",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "paint3d.png",
+        "pathID": "paint3d",
         "darkMode": "no",
         "friendlyName": "Paint 3D",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "people.png",
+        "pathID": "people",
         "darkMode": "no",
         "friendlyName": "People",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "phonelink.png",
+        "pathID": "phonelink",
         "darkMode": "no",
         "friendlyName": "Phone Link",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "photos.png",
+        "pathID": "photos",
         "darkMode": "no",
         "friendlyName": "Photos",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "2"
       }, 
       {
-        "path": "powerautomate.png",
+        "pathID": "powerautomate",
         "darkMode": "no",
         "friendlyName": "Power Automate",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "powerbidesktop.png",
+        "pathID": "powerbidesktop",
         "darkMode": "no",
         "friendlyName": "Power BI Desktop",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "powertoys.png",
+        "pathID": "powertoys",
         "darkMode": "no",
         "friendlyName": "PowerToys",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "printqueueactioncenter.png",
+        "pathID": "printqueueactioncenter",
         "darkMode": "no",
         "friendlyName": "Print Management",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "quickassist.png",
+        "pathID": "quickassist",
         "darkMode": "no",
         "friendlyName": "Quick Assist",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "remotedesktop.png",
+        "pathID": "remotedesktop",
         "darkMode": "no",
         "friendlyName": "Remote Desktop Connection",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "settings.png",
+        "pathID": "settings",
         "darkMode": "no",
         "friendlyName": "Settings",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "snippingtool.png",
+        "pathID": "snippingtool",
         "darkMode": "no",
         "friendlyName": "Snipping Tool",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "1"
       }, 
       {
-        "path": "solitarecollection.png",
+        "pathID": "solitarecollection",
         "darkMode": "no",
         "friendlyName": "Solitare Collection",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "stickynotes_light.png",
-        "darkMode": "stickynotes_dark.png",
+        "pathID": "stickynotes_light",
+        "darkMode": "stickynotes_dark",
         "friendlyName": "Sticky Notes",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "surface.png",
+        "pathID": "surface",
         "darkMode": "no",
         "friendlyName": "Surface",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "teams.png",
+        "pathID": "teams",
         "darkMode": "no",
         "friendlyName": "Teams",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "terminal.png",
+        "pathID": "terminal",
         "darkMode": "no",
         "friendlyName": "Terminal",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "tips.png",
+        "pathID": "tips",
         "darkMode": "no",
         "friendlyName": "Tips",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "videoeditor.png",
+        "pathID": "videoeditor",
         "darkMode": "no",
         "friendlyName": "Video Editor",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "voiceaccess.png",
+        "pathID": "voiceaccess",
         "darkMode": "no",
         "friendlyName": "Voice Access",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "voicerecorder.png",
+        "pathID": "voicerecorder",
         "darkMode": "no",
         "friendlyName": "Voice Recorder",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "weather.png",
+        "pathID": "weather",
         "darkMode": "no",
         "friendlyName": "Weather",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "windowssecurity.png",
+        "pathID": "windowssecurity",
         "darkMode": "no",
         "friendlyName": "Windows Security",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "linuxsubsystem.png",
+        "pathID": "linuxsubsystem",
         "darkMode": "no",
         "friendlyName": "Windows Subsystem for Linux Preview",
-        "firstSeen": "10X"
+        "firstSeen": "10X", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "winfr.png",
+        "pathID": "winfr",
         "darkMode": "no",
         "friendlyName": "Windows File Recovery",
-        "firstSeen": "10"
+        "firstSeen": "10", 
+        "hasAlts": "0"
       }, 
       {
-        "path": "xboxgamebar.png",
+        "pathID": "xboxgamebar",
         "darkMode": "no",
         "friendlyName": "Xbox Game Bar",
-        "firstSeen": "11"
+        "firstSeen": "11", 
+        "hasAlts": "0"
       }
 ]
 
@@ -337,6 +406,13 @@ var gt = document.getElementById('gt');
 var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
 
+var altContainer = document.getElementById('altBox');
+var ac1 = document.getElementById('alt1');
+var ac2 = document.getElementById('alt2');
+var ac3 = document.getElementById('alt3');
+var ac4 = document.getElementById('alt4');
+var ac5 = document.getElementById('alt5');
+
 var gridBox = document.getElementById('grid'),
     iconBox = document.getElementById('icon'),
     infoBox = document.getElementById('iconInfo'),
@@ -344,18 +420,70 @@ var gridBox = document.getElementById('grid'),
 
     icons.forEach(function (iconInd, index) {
     clone = iconBox.cloneNode();
-    clone.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
+    clone.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
     clone.setAttribute('data-iconName', iconInd["friendlyName"]);
     clone.setAttribute('data-darkMode', iconInd["darkMode"]);
+    clone.setAttribute('title', iconInd['friendlyName']);
+    clone.setAttribute('data-hasAlts', iconInd['hasAlts']);
     gridBox.appendChild(clone);
 
     clone.onclick = function () {
-        previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
-        localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["path"] + '")');
-        localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '")');
+        previewBox.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
+        localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
+        localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '.png")');
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
         infoBox.innerText = iconInd["friendlyName"];
+
+        ac1.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v1.png")';
+        ac2.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v2.png")';
+        ac3.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v3.png")';
+        ac4.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v4.png")';
+        ac5.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v5.png")';
+
+        if (iconInd['hasAlts'] === "1"){
+          altContainer.style.display = "flex";
+          ac1.style.display = "flex";
+          ac2.style.display = "none";
+          ac3.style.display = "none";
+          ac4.style.display = "none";
+          ac5.style.display = "none";
+        } else if (iconInd['hasAlts'] === "2"){
+          altContainer.style.display = "flex";
+          ac1.style.display = "flex";
+          ac2.style.display = "flex";
+          ac3.style.display = "none";
+          ac4.style.display = "none";
+          ac5.style.display = "none";
+        } else if (iconInd['hasAlts'] === "3"){
+          altContainer.style.display = "flex";
+          ac1.style.display = "flex";
+          ac2.style.display = "flex";
+          ac3.style.display = "flex";
+          ac4.style.display = "none";
+          ac5.style.display = "none";
+        } else if (iconInd['hasAlts'] === "4"){
+          altContainer.style.display = "flex";
+          ac1.style.display = "flex";
+          ac2.style.display = "flex";
+          ac3.style.display = "flex";
+          ac4.style.display = "flex";
+          ac5.style.display = "none";
+        } else if (iconInd['hasAlts'] === "5"){
+          altContainer.style.display = "flex";
+          ac1.style.display = "flex";
+          ac2.style.display = "flex";
+          ac3.style.display = "flex";
+          ac4.style.display = "flex";
+          ac5.style.display = "flex";
+        } else if (iconInd['hasAlts'] === "0"){
+          altContainer.style.display = "none";
+          ac1.style.display = "none";
+          ac2.style.display = "none";
+          ac3.style.display = "none";
+          ac4.style.display = "none";
+          ac5.style.display = "none";
+        }
 
         if (iconInd['darkMode'] === "no") {
           darkToggle.style.display = "none";
