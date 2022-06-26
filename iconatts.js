@@ -158,7 +158,7 @@ const icons = [
         "darkMode": "no",
         "friendlyName": "Microsoft Whiteboard",
         "firstSeen": "10X", 
-        "hasAlts": "2"
+        "hasAlts": "1"
       }, 
       {
         "pathID": "mixedrealityportal",
@@ -415,7 +415,7 @@ var ac5 = document.getElementById('alt5');
 
 var gridBox = document.getElementById('grid'),
     iconBox = document.getElementById('icon'),
-    infoBox = document.getElementById('iconInfo'),
+    infoBox = document.getElementById('iconInfoContent'),
     clone;
 
     icons.forEach(function (iconInd, index) {
@@ -423,7 +423,6 @@ var gridBox = document.getElementById('grid'),
     clone.setAttribute('style', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
     clone.setAttribute('data-iconName', iconInd["friendlyName"]);
     clone.setAttribute('data-darkMode', iconInd["darkMode"]);
-    clone.setAttribute('title', iconInd['friendlyName']);
     clone.setAttribute('data-hasAlts', iconInd['hasAlts']);
     gridBox.appendChild(clone);
 
@@ -433,7 +432,10 @@ var gridBox = document.getElementById('grid'),
         localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '.png")');
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
-        infoBox.innerText = iconInd["friendlyName"];
+
+        document.getElementById('moreIconName').innerText = iconInd["friendlyName"];
+
+        moreBtn.style.display = "flex";
 
         ac1.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v1.png")';
         ac2.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v2.png")';
@@ -487,8 +489,11 @@ var gridBox = document.getElementById('grid'),
 
         if (iconInd['darkMode'] === "no") {
           darkToggle.style.display = "none";
-        } else {
+          document.getElementById('moreIconClrMd').style.display = "none";
+          document.getElementById('moreIconClrMd').innerText = "Light";
+    } else {
           darkToggle.style.display = "flex";
+          document.getElementById('moreIconClrMd').style.display = "flex";
         }
     };
 
@@ -500,12 +505,16 @@ var gridBox = document.getElementById('grid'),
 
     if (showDarkIcon == true) {
       previewBox.setAttribute('style', localStorage.getItem('darkImg'));
-    } else {
+      document.getElementById('moreIconClrMd').innerText = "Dark";
+        } else {
       previewBox.setAttribute('style', localStorage.getItem('lightImg'));
+      document.getElementById('moreIconClrMd').innerText = "Light";
     }
   }
 
 });
+
+// Selected icon indication
 
 window.onclick = (e) => {
   if (e.target.classList.contains('icon')) {
@@ -515,4 +524,42 @@ window.onclick = (e) => {
   }
   e.target.classList.add('selected');
 }
+}
+
+// Context menu
+
+const contextMenu = document.getElementById("context-menu");
+const scope = document.querySelector("body");
+
+scope.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+
+  const { clientX: mouseX, clientY: mouseY } = event;
+
+  contextMenu.style.top = `${mouseY}px`;
+  contextMenu.style.left = `${mouseX}px`;
+
+  contextMenu.classList.add("visible");
+});
+
+scope.addEventListener("click", (e) => {
+  if (e.target.offsetParent != contextMenu) {
+    contextMenu.classList.remove("visible");
+  }
+});
+
+// More info btn & menu
+var moreBtn = document.getElementById('moreInfoBtn');
+var moreMenu = document.getElementById('iconInfo');
+
+moreBtn.onclick = function () {
+  if (moreMenu.getAttribute('data-menuShowing') == "n") {
+    moreBtn.innerHTML = '<i class="fa-solid fa-close"></i>'
+    moreMenu.style.opacity = "1";
+    moreMenu.setAttribute('data-menuShowing', "y");
+  } else {
+    moreBtn.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>'
+    moreMenu.style.opacity = "0";
+    moreMenu.setAttribute('data-menuShowing', "n");
+  }
 }

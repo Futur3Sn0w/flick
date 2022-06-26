@@ -55,6 +55,11 @@ body{
         --mainGridTitleFontColor: #333;
 
         --heroIconPlateColor: rgba(255, 255, 255, .8);
+
+        --contextMenuBackColor: rgba(0, 0, 0, 0.1);
+        --contextButtonBackColor: rgba(255, 255, 255, 0.7);
+        --contextButtonBackColorHov: rgba(255, 255, 255, 1);
+        --contextButtonFontColor: black;
     }
 }
 
@@ -76,5 +81,10 @@ body{
         --mainGridTitleFontColor: #EEE;
 
         --heroIconPlateColor: rgba(48, 48, 48, .5);
+
+        --contextMenuBackColor: rgba(255, 255, 255, 0.3);
+        --contextButtonBackColor: rgba(255, 255, 255, 0.7);
+        --contextButtonBackColorHov: rgba(255, 255, 255, 0.9);
+        --contextButtonFontColor: black;
     }
 }

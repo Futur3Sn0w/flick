@@ -10,11 +10,19 @@
     <script src="https://kit.fontawesome.com/a1fc6f0f3a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="versionInfo">v0.6.0</div>
+    <div class="context-menu" id="context-menu">
+        <div class="cmItem cmItem1" id="changeBgBtn">Change background</div>
+        <div class="cmItem cmItem2 disabledCmItem">Dummy option</div>
+    </div>
+    <div class="versionInfo">v0.7.0</div>
+    <div class="hoverBtn darkToggle" id="darkToggle">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+    </div>
+
+    <div class="hoverBtn moreInfoBtn" id="moreInfoBtn">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
     <div class="largePreview" id="lrgPrev" data-iconName="No icon selected">
-        <div class="darkToggle" id="darkToggle">
-            <i class="fa-solid fa-circle-half-stroke"></i>
-        </div>
         <div class="alts" id="altBox">
             <div class="alt" id="alt1"></div>
             <div class="alt" id="alt2"></div>
@@ -23,11 +31,23 @@
             <div class="alt" id="alt5"></div>
         </div>
     </div>
-    <div class="iconInfo" id="iconInfo"></div>
+    <div class="iconInfo" id="iconInfo" data-menuShowing="n">
+        <div class="iconInfoContent" id="iconInfoContent">
+            <div id="moreIconName"></div>
+            <div id="moreIconClrMd">Light</div>
+        </div>
+    </div>
 
     <div class="grid" id="grid">
         <div class="gridTitle" id="gt">Icons</div>
-        <input type="radio" name="winIcon" id="icon" class="icon" data-iconName=""></input>
+        <div id="icon" class="icon" data-iconName="">
+            <div class="indic" id="darkIND">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+            <div class="indic" id="altsIND">
+                <i class="fa-solid fa-rectangle-history"></i>
+            </div>
+        </div>
     </div>
 
     <script src="iconatts.js"></script>

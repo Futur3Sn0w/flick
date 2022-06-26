@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    gap: 1px;
+    gap: 5px;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -57,6 +57,7 @@
 .icon{
     min-height: 40px;
     max-width: 180px;
+    margin: 0 5px;
 
     overflow: hidden;
     cursor: pointer;
@@ -69,8 +70,8 @@
     border-radius: 5px;
 
     position: relative;
-
     opacity: .7;
+    display: flex;
 
     /* background-position: 50% 35%; */
     /* background-size: 53%; */
@@ -78,6 +79,17 @@
     background-size: auto 75%;
     background-repeat: no-repeat;
     background-position: 5px 50%;
+}
+
+.indic{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+
+    background-color: black;
+    width: 20px;
+    height: 20px;
 }
 
 .grid:hover .icon{
@@ -107,7 +119,7 @@
     /* DISPLAY: NONE; */
 }
 
-.icon:nth-of-type(1){
+.icon:nth-of-type(2){
     display: none;
 }
 
@@ -197,72 +209,132 @@
 }
 
 .iconInfo{
-    width: 200px;
-    height: 270px;
+    width: 336px;
+    height: 336px;
 
-    background-color: var(--heroIconPlateColor);
+    background-color: var(--mainGridBackColor);
     backdrop-filter: blur(20px);
     border-radius: 10px;
 
     position: absolute;
-    z-index: 3;
-    right: 50%;
+    z-index: 5;
+    left: 50%;
     top: 50%;
-    transform: translate(95%, -50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
-
-    transition: .3s transform 1s, .3s opacity 1s;
 
     DISPLAY: FLEX;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
 
+    /* user-select: none; */
+
     font-weight: 500;
     color: var(--mainGridFontColor);
 }
 
-.largePreview:hover ~ .iconInfo,
-.iconInfo:hover{
-    transform: translate(190%, -50%);
-    opacity: 1;
+.iconInfoContent{
+    width: max-content;
+    height: max-content;
+    padding: 15px 10px;
 
-    transition: .3s transform .5s, .3s opacity .5s;
-}
+    background-color: var(--heroIconPlateColor);
+    border-radius: 7px;
 
-.iconInfo::after{
-    content: "ALPHA";
-    font-size: 50px;
-
-    position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    aspect-ratio: 1/1;
-
-    opacity: 0.1;
 }
 
-.darkToggle{
+#moreIconName{
+    font-size: 25px;
+    min-width: max-content;
+}
+
+#moreIconClrMd{
+    opacity: .4;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.largePreview:hover .moreInfoBtn,
+.iconInfo:hover .moreInfoBtn,
+.moreInfoBtn:hover{
+    opacity: 1;
+}
+
+.hoverBtn{
     width: 40px;
     height: 40px;
 
     border-radius: 50%;
-    background-color: white;
-
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    top: -20px;
-    right: -20px;
-
-    transition: transform .3s;
+    color: var(--mainGridFontColor);
+    background-color: var(--heroIconPlateColor);
+    backdrop-filter: blur(20px);
 
     display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    position: absolute;
+    top: calc(50% - 170px);
+    transform: translate(-50%, -50%);
 }
 
-.darkToggle:active{
-    transform: rotate(180deg);
+.moreInfoBtn{
+    right: calc(50% - 208px);
+}
+
+.darkToggle{
+    right: calc(50% - 165px);
+}
+
+.hoverBtn:hover{
+    opacity: .8;
+}
+
+.context-menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+    z-index: 10000;
+
+    background-color: var(--contextMenuBackColor);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+    width: 180px;
+    height: max-content;
+    padding: 5px 5px;
+
+    border-radius: 7px;
+}
+
+.visible{
+    display: flex;
+}
+
+.disabledCmItem{
+    opacity: .5;
+    pointer-events: none;
+}
+
+.cmItem{
+    padding: 5px 10px;
+    background-color: var(--contextButtonBackColor);
+    color: var(--contextButtonFontColor);
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    user-select: none;
+}
+
+.cmItem:hover{
+    background-color: var(--contextButtonBackColorHov);
 }
