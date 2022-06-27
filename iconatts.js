@@ -575,10 +575,26 @@ moreBtn.onclick = function () {
   if (moreMenu.getAttribute('data-menuShowing') == "n") {
     moreBtn.innerHTML = '<i class="fa-solid fa-close"></i>'
     moreMenu.style.opacity = "1";
+    moreMenu.style.paddingBottom = "0";
     moreMenu.setAttribute('data-menuShowing', "y");
   } else {
     moreBtn.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>'
     moreMenu.style.opacity = "0";
+    moreMenu.style.paddingBottom = "30px";
     moreMenu.setAttribute('data-menuShowing', "n");
   }
 }
+
+// test
+
+allAlts.forEach(alt => {
+  alt.onmousedown = function () {
+    previewBox.style.backgroundSize = "150px";
+    previewBox.style.backgroundPosition = "calc(50% - 250px)";
+  }
+
+  alt.onmouseup = function () {
+    previewBox.style.backgroundSize = "256px";
+    previewBox.style.backgroundPosition = "50%";
+  }
+});

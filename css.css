@@ -20,43 +20,70 @@
     height: 100vh;
     padding-bottom: 5px;
 
-    transition: width .2s, background-color .2s;
+    transition: .25s width 1s, background-color .2s;
 }
 
 .grid:hover{
-    width: 180px;
+    width: 200px;
     background-color: var(--mainGridBackColor);
     border-right: 1px solid var(--mainGridBackColor);
+    transition: .25s width .01s, background-color .2s
 }
 
 .gridTitle{
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
 
     display: flex;
     align-items: flex-end;
-    padding-left: 7px;
+    padding-bottom: 3px;
 
-    box-sizing: content-box !important;
+    box-sizing: border-box;
 
     background-color: var(--mainGridTitleBackColor);
-    color: var(--mainGridTitleFontColor);
+    color: transparent;
+    border-radius: 7px;
+
+    background-image: url("favicon/safari-pinned-tab.svg");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
 
     position: sticky;
     z-index: 2;
     top: 0;
 
-    width: 180px;
-    min-height: 55px;
-    height: 0;
+    padding-left: 50px;
+    max-width: 50px;
+    min-height: 45px;
     overflow: hidden;
 
-    transition: color .2s, min-height .3s, padding .2s;
+    user-select: none;
+
+    transition: .15s color 1s, .25s max-width 1s, .15s border-radius 1s;
+}
+
+.gridTitle::before{
+    content: "Windows";
+
+    position: absolute;
+    top: 1px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grid:hover .gridTitle{
+    color: var(--mainGridTitleFontColor);
+    max-width: 200px;
+    border-radius: 0;
+
+    transition: color .15s, max-width .25s, border-radius .15s;
 }
 
 .icon{
     min-height: 40px;
-    max-width: 180px;
+    max-width: 200px;
     margin: 0 5px;
 
     overflow: hidden;
@@ -66,7 +93,7 @@
 
     background-color: var(--mainGridIconBackColor);
     color: var(--mainGridFontColor);
-    transition: opacity .3s;
+    transition: opacity .3s, background-size .2s;
     border-radius: 5px;
 
     position: relative;
@@ -76,9 +103,13 @@
     /* background-position: 50% 35%; */
     /* background-size: 53%; */
 
-    background-size: auto 75%;
+    background-size: 30px;
     background-repeat: no-repeat;
-    background-position: 5px 50%;
+    background-position: 5px center;
+}
+
+.icon:active{
+    background-size: 20px;
 }
 
 .indic{
@@ -106,7 +137,7 @@
     font-family: "Segoe UI Variable Small";
     font-weight: inherit;
 
-    width: 115px;
+    width: 135px;
     overflow: hidden;
     white-space: nowrap;
 
@@ -136,7 +167,7 @@
     box-sizing: content-box;
 
     background-color: var(--heroIconPlateColor);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) saturate(310%);
     border-radius: 10px;
 
     display: flex;
@@ -148,6 +179,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: background-size .3s, background-position .3s, background-image .1s;
 
     /* background-position: 50% 35%; */
     /* background-size: 53%; */
@@ -199,19 +231,24 @@
     aspect-ratio: 1/1;
 
     background-color: var(--mainGridTitleBackColor);
-    border-radius: 3px;
+    border-radius: 5px;
 
     display: none;
 
     background-size: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    transition: transform .1s;
+    transition: transform .1s, background-size .2s, background-position .2s, background-image .1s;
 }
 
 .alt:hover{
     transform: scale(1.1);
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.alt:active{
+    background-size: 80px;
+    background-position: 70px center;
 }
 
 .iconInfo{
@@ -221,6 +258,7 @@
     background-color: var(--mainGridBackColor);
     backdrop-filter: blur(20px);
     border-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
 
     position: absolute;
     z-index: 5;
@@ -238,6 +276,10 @@
 
     font-weight: 500;
     color: var(--mainGridFontColor);
+
+    padding-bottom: 30px;
+
+    transition: opacity .2s, padding-bottom .2s;
 }
 
 .iconInfoContent{
@@ -328,6 +370,8 @@
     position: absolute;
     top: calc(50% - 170px);
     transform: translate(-50%, -50%);
+
+    transition: opacity .1s;
 }
 
 .moreInfoBtn{

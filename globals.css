@@ -24,7 +24,7 @@ body{
     font-size: 15px;
     font-weight: 500;
     color: var(--mainGridFontColor);
-    background-color: var(--mainGridBackColor);
+    background-color: rgb(148, 80, 80);
     opacity: .4;
 
     user-select: none;
@@ -51,10 +51,10 @@ body{
         --mainGridIconSelectedColor: rgb(255, 255, 255);
         --mainGridIconSelectedFontColor: black;
 
-        --mainGridTitleBackColor: rgb(239, 239, 239);
+        --mainGridTitleBackColor: #bfbfc1;
         --mainGridTitleFontColor: #333;
 
-        --heroIconPlateColor: rgba(255, 255, 255, .8);
+        --heroIconPlateColor: rgba(255, 255, 255, .65);
 
         --contextMenuBackColor: rgba(0, 0, 0, 0.1);
         --contextButtonBackColor: rgba(255, 255, 255, 0.7);
@@ -77,10 +77,10 @@ body{
         --mainGridIconSelectedColor: rgb(255, 255, 255, .4);
         --mainGridIconSelectedFontColor: white;
 
-        --mainGridTitleBackColor: rgb(56, 56, 56);
+        --mainGridTitleBackColor: #241e2c;
         --mainGridTitleFontColor: #EEE;
 
-        --heroIconPlateColor: rgba(48, 48, 48, .5);
+        --heroIconPlateColor: rgba(48, 48, 48, .7);
 
         --contextMenuBackColor: rgba(255, 255, 255, 0.3);
         --contextButtonBackColor: rgba(255, 255, 255, 0.7);
