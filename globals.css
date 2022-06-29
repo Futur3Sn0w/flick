@@ -33,33 +33,65 @@ body{
 
 *{
     box-sizing: border-box;
+    user-select: none;
 
     font-family: "Segoe UI Variable Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.micaFore{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    color: var(--micaText);
+    cursor: pointer;
+
+    transition: background-color .1s;
+}
+
+.micaFore:hover{
+    background-color: var(--micaForeHov);
+}
+
+.micaFore.selected{
+    background-color: var(--micaFore);
+    border: 1px solid var(--micaBord);
+
+    font-weight: 700;
+
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.micaBase{
+    background-color: var(--micaBack);
+    color: var(--micaText);
+}
+
+.micaLabel{
+    font-size: 15px;
+    font-weight: 500;
+
+    background-color: var(--micaFore);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    color: var(--micaText);
+    border-radius: 4px;
+
+    width: max-content;
+    padding: 5px 10px;
 }
 
 @media (prefers-color-scheme: light) {
     :root{
         --backgroundImage: url("https://i.postimg.cc/knyRvbVv/Gradient-Light.png");
 
-        --mainGridBackColor: rgba(0, 0, 0, 0.2);
-
-        --mainGridFontColor: black;
-        --mainGridFontColorReverse: white;
-
-        --mainGridIconBackColor: rgba(255, 255, 255, 0.5);
-        --mainGridIconBackColorHov: rgba(255, 255, 255, 0.8);
-        --mainGridIconSelectedColor: rgb(255, 255, 255);
-        --mainGridIconSelectedFontColor: black;
-
-        --mainGridTitleBackColor: #bfbfc1;
-        --mainGridTitleFontColor: #333;
+        --micaBack: #f6f0f9;
+        --micaRest: rgba(255, 255, 255, .5);
+        --micaFore: white;
+        --micaForeHov: #e9e1ea;
+        --micaText: black;
+        --micaBord: #ddd5da;
 
         --heroIconPlateColor: rgba(255, 255, 255, .65);
-
-        --contextMenuBackColor: rgba(0, 0, 0, 0.1);
-        --contextButtonBackColor: rgba(255, 255, 255, 0.7);
-        --contextButtonBackColorHov: rgba(255, 255, 255, 1);
-        --contextButtonFontColor: black;
     }
 }
 
@@ -67,24 +99,13 @@ body{
     :root{
         --backgroundImage: url("https://i.postimg.cc/bvLPS8w1/Gradient-Dark.png");
 
-        --mainGridBackColor: rgba(60, 60, 60, 0.5);
-
-        --mainGridFontColor: white;
-        --mainGridFontColorReverse: black;
-
-        --mainGridIconBackColor: rgb(255, 255, 255, .1);
-        --mainGridIconBackColorHov: rgb(255, 255, 255, .2);
-        --mainGridIconSelectedColor: rgb(255, 255, 255, .4);
-        --mainGridIconSelectedFontColor: white;
-
-        --mainGridTitleBackColor: #241e2c;
-        --mainGridTitleFontColor: #EEE;
+        --micaBack: #271a2f;
+        --micaRest: rgba(70, 70, 70, 0.3);
+        --micaFore: #483943;
+        --micaForeHov: #362737;
+        --micaText: white;
+        --micaBord: #51434a;
 
         --heroIconPlateColor: rgba(48, 48, 48, .7);
-
-        --contextMenuBackColor: rgba(255, 255, 255, 0.3);
-        --contextButtonBackColor: rgba(255, 255, 255, 0.7);
-        --contextButtonBackColorHov: rgba(255, 255, 255, 0.9);
-        --contextButtonFontColor: black;
     }
 }

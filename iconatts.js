@@ -402,7 +402,7 @@ const icons = [
 
 var indxAmt = icons.length;
 var gt = document.getElementById('gt');
-  gt.innerText = indxAmt + " icons";
+  gt.innerText = indxAmt;
 var previewBox = document.getElementById('lrgPrev');
 var darkToggle = document.getElementById('darkToggle');
 
@@ -414,8 +414,8 @@ var ac3 = document.getElementById('alt3');
 var ac4 = document.getElementById('alt4');
 var ac5 = document.getElementById('alt5');
 
-var gridBox = document.getElementById('grid'),
-    iconBox = document.getElementById('icon'),
+var gridBox = document.getElementById('gridSub'),
+    iconBox = document.getElementById('button'),
     infoBox = document.getElementById('iconInfoContent'),
     clone;
 
@@ -442,6 +442,7 @@ var gridBox = document.getElementById('grid'),
         localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
         localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '.png")');
         previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
+        lpLabel.innerText = iconInd["friendlyName"];
         previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
 
         document.getElementById('moreIconName').innerText = iconInd["friendlyName"];
@@ -450,11 +451,20 @@ var gridBox = document.getElementById('grid'),
 
         moreBtn.style.display = "flex";
 
+        var ccResult = iconInd['pathID'];
+        var convResult = ccResult.replace( /([A-Z])/g, " $1" );
+        var finalResult = convResult.charAt(0).toUpperCase() + convResult.slice(1);
+
         ac1.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v1.png")';
+        ac1.setAttribute('data-altTooltip', finalResult);
         ac2.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v2.png")';
+        ac2.setAttribute('data-altTooltip', finalResult);
         ac3.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v3.png")';
+        ac3.setAttribute('data-altTooltip', finalResult);
         ac4.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v4.png")';
+        ac4.setAttribute('data-altTooltip', finalResult);
         ac5.style.backgroundImage = 'url("iconimgs/alt/' + iconInd["pathID"] + '_v5.png")';
+        ac5.setAttribute('data-altTooltip', finalResult);
 
         if (iconInd['hasAlts'] === "1"){
           altContainer.style.display = "flex";
@@ -464,6 +474,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "none";
           ac5.style.display = "none";
           document.getElementById('moreAltAmt').style.display = "flex";
+          document.getElementById('altBox').style.display = "flex";
         } else if (iconInd['hasAlts'] === "2"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -472,6 +483,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "none";
           ac5.style.display = "none";
           document.getElementById('moreAltAmt').style.display = "flex";
+          document.getElementById('altBox').style.display = "flex";
         } else if (iconInd['hasAlts'] === "3"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -480,6 +492,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "none";
           ac5.style.display = "none";
           document.getElementById('moreAltAmt').style.display = "flex";
+          document.getElementById('altBox').style.display = "flex";
         } else if (iconInd['hasAlts'] === "4"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -488,6 +501,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "flex";
           ac5.style.display = "none";
           document.getElementById('moreAltAmt').style.display = "flex";
+          document.getElementById('altBox').style.display = "flex";
         } else if (iconInd['hasAlts'] === "5"){
           altContainer.style.display = "flex";
           ac1.style.display = "flex";
@@ -496,6 +510,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "flex";
           ac5.style.display = "flex";
           document.getElementById('moreAltAmt').style.display = "flex";
+          document.getElementById('altBox').style.display = "flex";
         } else if (iconInd['hasAlts'] === "0"){
           altContainer.style.display = "none";
           ac1.style.display = "none";
@@ -504,6 +519,7 @@ var gridBox = document.getElementById('grid'),
           ac4.style.display = "none";
           ac5.style.display = "none";
           document.getElementById('moreAltAmt').style.display = "none";
+          document.getElementById('altBox').style.display = "none";
         }
 
         if (iconInd['darkMode'] === "no") {
@@ -536,7 +552,7 @@ var gridBox = document.getElementById('grid'),
 // Selected icon indication
 
 window.onclick = (e) => {
-  if (e.target.classList.contains('icon')) {
+  if (e.target.classList.contains('button')) {
   const active = document.querySelector('.selected');
   if(active){
     active.classList.remove('selected');
@@ -544,28 +560,6 @@ window.onclick = (e) => {
   e.target.classList.add('selected');
 }
 }
-
-// Context menu
-
-const contextMenu = document.getElementById("context-menu");
-const scope = document.querySelector("body");
-
-scope.addEventListener("contextmenu", (event) => {
-  event.preventDefault();
-
-  const { clientX: mouseX, clientY: mouseY } = event;
-
-  contextMenu.style.top = `${mouseY}px`;
-  contextMenu.style.left = `${mouseX}px`;
-
-  contextMenu.classList.add("visible");
-});
-
-scope.addEventListener("click", (e) => {
-  if (e.target.offsetParent != contextMenu) {
-    contextMenu.classList.remove("visible");
-  }
-});
 
 // More info btn & menu
 var moreBtn = document.getElementById('moreInfoBtn');
@@ -575,22 +569,38 @@ moreBtn.onclick = function () {
   if (moreMenu.getAttribute('data-menuShowing') == "n") {
     moreBtn.innerHTML = '<i class="fa-solid fa-close"></i>'
     moreMenu.style.opacity = "1";
+    moreMenu.style.zIndex = "10";
     moreMenu.style.paddingBottom = "0";
     moreMenu.setAttribute('data-menuShowing', "y");
+    previewBox.setAttribute('data-labelShowing', "n");
+    labelToggle();
   } else {
     moreBtn.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>'
     moreMenu.style.opacity = "0";
+    moreMenu.style.zIndex = "-10";
     moreMenu.style.paddingBottom = "30px";
     moreMenu.setAttribute('data-menuShowing', "n");
+    previewBox.setAttribute('data-labelShowing', "y");
+    labelToggle();
   }
 }
 
-// test
+var lpLabel = document.getElementById('lpLabel');
+
+function labelToggle() {
+  if (previewBox.getAttribute('data-labelShowing') == "n") {
+    lpLabel.classList.add('labelHide');
+  } else {
+    lpLabel.classList.remove('labelHide');
+  }
+}
+
+// 'Swap' animation for Large Preview
 
 allAlts.forEach(alt => {
   alt.onmousedown = function () {
     previewBox.style.backgroundSize = "150px";
-    previewBox.style.backgroundPosition = "calc(50% - 250px)";
+    previewBox.style.backgroundPositionY = "calc(50% + 250px)";
   }
 
   alt.onmouseup = function () {

@@ -1,176 +1,16 @@
-.grid{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 5px;
-
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 0;
-
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    color: var(--mainGridFontColor);
-
-    width: 50px;
-    height: 100vh;
-    padding-bottom: 5px;
-
-    transition: .25s width 1s, background-color .2s;
-}
-
-.grid:hover{
-    width: 200px;
-    background-color: var(--mainGridBackColor);
-    border-right: 1px solid var(--mainGridBackColor);
-    transition: .25s width .01s, background-color .2s
-}
-
-.gridTitle{
-    font-size: 15px;
-    font-weight: 500;
-
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 3px;
-
-    box-sizing: border-box;
-
-    background-color: var(--mainGridTitleBackColor);
-    color: transparent;
-    border-radius: 7px;
-
-    background-image: url("favicon/safari-pinned-tab.svg");
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-
-    position: sticky;
-    z-index: 2;
-    top: 0;
-
-    padding-left: 50px;
-    max-width: 50px;
-    min-height: 45px;
-    overflow: hidden;
-
-    user-select: none;
-
-    transition: .15s color 1s, .25s max-width 1s, .15s border-radius 1s;
-}
-
-.gridTitle::before{
-    content: "Windows";
-
-    position: absolute;
-    top: 1px;
-
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.grid:hover .gridTitle{
-    color: var(--mainGridTitleFontColor);
-    max-width: 200px;
-    border-radius: 0;
-
-    transition: color .15s, max-width .25s, border-radius .15s;
-}
-
-.icon{
-    min-height: 40px;
-    max-width: 200px;
-    margin: 0 5px;
-
-    overflow: hidden;
-    cursor: pointer;
-
-    appearance: none;
-
-    background-color: var(--mainGridIconBackColor);
-    color: var(--mainGridFontColor);
-    transition: opacity .3s, background-size .2s;
-    border-radius: 5px;
-
-    position: relative;
-    opacity: .7;
-    display: flex;
-
-    /* background-position: 50% 35%; */
-    /* background-size: 53%; */
-
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
-}
-
-.icon:active{
-    background-size: 20px;
-}
-
-.indic{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10000;
-
-    background-color: black;
-    width: 20px;
-    height: 20px;
-}
-
-.grid:hover .icon{
-    opacity: 1;
-}
-
-.icon:hover{
-    background-color: var(--mainGridIconBackColorHov);
-}
-
-.icon::after{
-    content: attr(data-iconName);
-    font-size: 12px;
-    font-family: "Segoe UI Variable Small";
-    font-weight: inherit;
-
-    width: 135px;
-    overflow: hidden;
-    white-space: nowrap;
-
-    position: absolute;
-    bottom: 13px;
-    left: 42px;
-    text-align: left;
-    text-overflow: ellipsis;
-
-    /* DISPLAY: NONE; */
-}
-
-.icon:nth-of-type(2){
-    display: none;
-}
-
-.selected{
-    background-color: var(--mainGridIconSelectedColor) !important;
-    color: var(--mainGridIconSelectedFontColor) !important;
-    font-weight: 700;
-}
+/* 'Hero' box (Large Preview) */
 
 .largePreview{
-    height: 256px;
-    aspect-ratio: 1/1;
-
-    box-sizing: content-box;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
 
     background-color: var(--heroIconPlateColor);
-    backdrop-filter: blur(20px) saturate(310%);
+    backdrop-filter: blur(20px) saturate(250%);
     border-radius: 10px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -179,49 +19,45 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: background-size .3s, background-position .3s, background-image .1s;
+    transition: background-size .3s, background-position .3s, background-image .1s, height 1s;
+}
 
-    /* background-position: 50% 35%; */
-    /* background-size: 53%; */
+.lpLabel{
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, 0);
 
+    transition: opacity .2s, transform .2s;
+}
+
+.lpLabel.labelHide{
+    opacity: 0;
+    transform: translate(-50%, 10px);
+}
+
+.lpIcon{
     background-image: url('iconimgs/Explorer/Badges/help.png');
 
     background-size: 256px;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center;
 
-    padding: 40px;
+    min-width: 256px;
+    min-height: 256px;
+
+    transition: background-size .3s, background-position .3s, background-image .1s;
 }
 
-.largePreview::after{
-    content: attr(data-iconName);
+/*  */
 
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: max-content;
-    padding: 5px 10px;
-    text-align: center;
-
-    font-weight: 500;
-    background-color: var(--mainGridFontColorReverse);
-    color: var(--mainGridFontColor);
-    border-radius: 4px;
-
-    /* DISPLAY: NONE; */
-}
+/* Icon revisions ("alts") */
 
 .alts{
-    position: absolute;
-    left: -90px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
+    margin-top: 20px;
+    display: none;
+    gap: 5px;
     align-items: center;
     justify-content: center;
 }
@@ -230,38 +66,63 @@
     width: 80px;
     aspect-ratio: 1/1;
 
-    background-color: var(--mainGridTitleBackColor);
-    border-radius: 5px;
+    appearance: none;
 
     display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 
     background-size: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    transition: transform .1s, background-size .2s, background-position .2s, background-image .1s;
-}
-
-.alt:hover{
-    transform: scale(1.1);
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: background-size .2s, background-position .2s, background-image .1s, background-color .2s !important;
 }
 
 .alt:active{
     background-size: 80px;
-    background-position: 70px center;
+    background-position: center -70px;
 }
 
-.iconInfo{
-    width: 336px;
-    height: 336px;
+.alt::after{
+    content: attr(data-altTooltip);
 
-    background-color: var(--mainGridBackColor);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+    background-color: var(--micaFore);
+    color: var(--micaText);
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
 
     position: absolute;
-    z-index: 5;
+    top: 0;
+    z-index: -10;
+
+    opacity: 0;
+
+    transition: .2s opacity 0s, .2s top 0s;
+}
+
+.alt:hover::after{
+    opacity: 1;
+    top: -35px;
+    transition: .2s opacity 1s, .2s top 1s;
+}
+
+/*  */
+
+/* Icon 'more info' overlay */
+
+.iconInfo{
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--micaBack);
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: -10;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -272,62 +133,58 @@
     align-items: center;
     justify-content: center;
 
-    /* user-select: none; */
-
-    font-weight: 500;
-    color: var(--mainGridFontColor);
-
-    padding-bottom: 30px;
-
-    transition: opacity .2s, padding-bottom .2s;
+    transition: opacity .2s, padding-bottom .2s, height .3s;
 }
 
 .iconInfoContent{
+    max-width: 100%;
     width: max-content;
     height: max-content;
-    padding: 15px 10px;
+    padding: 13px 20px;
 
-    background-color: var(--heroIconPlateColor);
-    border-radius: 7px;
+    overflow: clip;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.head{
+.infoHead{
     display: flex;
     position: relative;
     margin-bottom: 7px;
 }
 
-.head::after{
+.infoHead::after{
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 1px;
 
     position: absolute;
-    bottom: -4px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    background-color: var(--contextMenuBackColor);
+    background-color: var(--micaBord);
 }
 
 #moreIconName{
-    font-size: 25px;
-    min-width: max-content;
+    font-size: 30px;
+    word-wrap: normal;
+    width: max-content;
     font-weight: 700;
 }
 
 #moreIconClrMd{
     opacity: .4;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
 #moreAltAmt,
 #moreFirstSeen{
-    font-size: 15px;
+    font-size: 18px;
     padding-left: 10px;
     position: relative;
 }
@@ -335,96 +192,43 @@
 #moreAltAmt::after,
 #moreFirstSeen::after{
     content: "";
-    width: 6px;
-    height: 1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
 
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
 
-    background-color: var(--mainGridFontColor);
+    background-color: var(--micaText);
+    opacity: .6;
 }
 
-.largePreview:hover .moreInfoBtn,
-.iconInfo:hover .moreInfoBtn,
-.moreInfoBtn:hover{
-    opacity: 1;
+/*  */
+
+/* Bubble buttons on Large Preview */
+
+.previewButtons{
+    display: flex;
+    gap: 5px;
+
+    position: absolute;
+    top: -20px;
+    right: -20px;
 }
 
 .hoverBtn{
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    aspect-ratio: 1/1;
 
-    border-radius: 50%;
-    color: var(--mainGridFontColor);
-    background-color: var(--heroIconPlateColor);
-    backdrop-filter: blur(20px);
+    border-radius: 50% !important;
+    background-color: var(--micaFore) !important;
 
     display: none;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     z-index: 1000;
-
-    position: absolute;
-    top: calc(50% - 170px);
-    transform: translate(-50%, -50%);
-
-    transition: opacity .1s;
 }
 
-.moreInfoBtn{
-    right: calc(50% - 208px);
-}
-
-.darkToggle{
-    right: calc(50% - 165px);
-}
-
-.hoverBtn:hover{
-    opacity: .8;
-}
-
-.context-menu{
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    gap: 5px;
-    z-index: 10000;
-
-    background-color: var(--contextMenuBackColor);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-
-    width: 180px;
-    height: max-content;
-    padding: 5px 5px;
-
-    border-radius: 7px;
-}
-
-.visible{
-    display: flex;
-}
-
-.disabledCmItem{
-    opacity: .5;
-    pointer-events: none;
-}
-
-.cmItem{
-    padding: 5px 10px;
-    background-color: var(--contextButtonBackColor);
-    color: var(--contextButtonFontColor);
-    border-radius: 5px;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    user-select: none;
-}
-
-.cmItem:hover{
-    background-color: var(--contextButtonBackColorHov);
-}
+/*  */

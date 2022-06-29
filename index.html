@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flick - Fluent Icons</title>
+    <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="globals.css">
     <script src="https://kit.fontawesome.com/a1fc6f0f3a.js" crossorigin="anonymous"></script>
@@ -20,47 +21,50 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="context-menu" id="context-menu">
-        <div class="cmItem cmItem1" id="changeBgBtn">Change background</div>
-        <div class="cmItem cmItem2 disabledCmItem">Dummy option</div>
-    </div>
-    <div class="versionInfo">v0.7.2</div>
-    <div class="hoverBtn darkToggle" id="darkToggle">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-    </div>
+    <div class="versionInfo">v0.8.0</div>
 
-    <div class="hoverBtn moreInfoBtn" id="moreInfoBtn">
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-    </div>
-    <div class="largePreview" id="lrgPrev" data-iconName="No icon selected">
-        <div class="alts" id="altBox">
-            <div class="alt" id="alt1"></div>
-            <div class="alt" id="alt2"></div>
-            <div class="alt" id="alt3"></div>
-            <div class="alt" id="alt4"></div>
-            <div class="alt" id="alt5"></div>
-        </div>
-    </div>
-    <div class="iconInfo" id="iconInfo" data-menuShowing="n">
-        <div class="iconInfoContent" id="iconInfoContent">
-            <div class="head">
-                <div id="moreIconName"></div>
-                <div id="moreIconClrMd">Light</div>
-            </div>
-            <div id="moreAltAmt">5 alts</div>
-            <div id="moreFirstSeen">First seen: 10X</div>
-        </div>
-    </div>
+    <div class="largePreview" id="largePreview" data-iconName="No icon selected" data-labelShowing="y">
+        <div class="lpIcon" id="lrgPrev"></div>
+        <div class="lpLabel micaLabel" id="lpLabel">No icon selected</div>
 
-    <div class="grid" id="grid">
-        <div class="gridTitle" id="gt">Icons</div>
-        <div id="icon" class="icon" data-iconName="">
-            <div class="indic" id="darkIND">
+        <div class="previewButtons">
+            <div class="hoverBtn darkToggle micaFore" id="darkToggle">
                 <i class="fa-solid fa-circle-half-stroke"></i>
             </div>
-            <div class="indic" id="altsIND">
-                <i class="fa-solid fa-rectangle-history"></i>
+        
+            <div class="hoverBtn moreInfoBtn micaFore" id="moreInfoBtn">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
+        </div>
+        
+        <div class="alts" id="altBox">
+            <input type="radio" name="calendar" class="alt micaFore" id="alt1"></input>
+            <input type="radio" name="calendar" class="alt micaFore" id="alt2"></input>
+            <input type="radio" name="calendar" class="alt micaFore" id="alt3"></input>
+            <input type="radio" name="calendar" class="alt micaFore" id="alt4"></input>
+            <input type="radio" name="calendar" class="alt micaFore" id="alt5"></input>
+        </div>
+
+        <div class="iconInfo" id="iconInfo" data-menuShowing="n">
+            <div class="iconInfoContent" id="iconInfoContent">
+                <div class="infoHead">
+                    <div id="moreIconName"></div>
+                    <div id="moreIconClrMd">Light</div>
+                </div>
+                <div id="moreAltAmt">5 alts</div>
+                <div id="moreFirstSeen">First seen: 10X</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid" id="gridMain">
+        <div class="gridTitle" id="gti">
+            <i id="gridIcon" class="fa-brands fa-microsoft"></i>
+            <div class="iconPackLabel" id="gv">Windows</div>
+            <div class="iconCount" id="gt">51 icons</div>
+        </div>
+        <div class="iconContainer" id="gridSub">
+            <div id="button" class="button micaFore" data-iconName=""></div>
         </div>
     </div>
 

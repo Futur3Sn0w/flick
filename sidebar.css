@@ -1,0 +1,145 @@
+/* Sidebar ('grid') */
+
+.grid{
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+
+    background-color: var(--micaRest);
+    backdrop-filter: blur(20px);
+    color: var(--micaText);
+    border-right: 1px solid var(--micaBord);
+
+    width: 50px;
+    height: 100vh;
+
+    transition: .25s width 1s, background-color .2s;
+}
+
+.grid:hover{
+    width: 200px;
+    background-color: var(--micaBack);
+    transition: .25s width .01s, background-color .2s
+}
+
+/*  */
+
+/* Sidebar header ('gridTitle') */
+
+.gridTitle{
+    border-bottom: 1px solid var(--micaBord);
+
+    position: absolute;
+    top: 0;
+
+    width: 200px;
+    height: 45px;
+
+    transition: .25s max-width 1s, background-color .2s;
+}
+
+.grid:hover .gridTitle{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--micaFore);
+
+    transition: max-width .25s, background-color .2s;
+}
+
+.iconPackLabel{
+    min-width: max-content !important;
+
+    position: absolute;
+    left: 50px;
+    top: 6px;
+
+    font-size: 23px;
+    font-weight: 700;
+    height: 21px;
+}
+
+.iconCount{
+    min-width: max-content !important;
+
+    font-size: 13px;
+    font-weight: 700;
+    opacity: .5;
+
+    position: absolute;
+    left: 150px;
+    top: 6px;
+
+    text-transform: uppercase;
+}
+
+#gridIcon{
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 26px;
+}
+
+/*  */
+
+/* Icons (sidebar buttons) */
+
+.iconContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+
+    margin-top: 45px;
+    padding: 5px 0;
+    overflow: hidden scroll;
+}
+
+.button{
+    min-height: 40px;
+    max-width: 200px;
+    margin: 0 5px;
+
+    transition: opacity .3s, background-size .2s, background-color .2s !important;
+
+    position: relative;
+    display: flex;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 6px center;
+}
+
+.button:active{
+    background-size: 17px;
+}
+
+/* Icon label */
+
+.button::before{
+    content: attr(data-iconName);
+    font-size: 12px;
+
+    width: 135px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    position: absolute;
+    bottom: 13px;
+    left: 43px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+/* Icon - Misc properties */
+
+.button:nth-of-type(1){
+    display: none;
+}
+
+/*  */
