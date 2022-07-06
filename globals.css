@@ -1,29 +1,29 @@
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
 
+    overflow: hidden;
+
     background-image: var(--backgroundImage);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    overflow: hidden;
 }
 
-.versionInfo{
+.versionInfo {
     position: absolute;
     right: 10px;
     top: 10px;
     z-index: 1000;
 
-    padding: 3px 5px;
+    padding: 3px 6px;
     border-radius: 100px;
 
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
-    color: var(--mainGridFontColor);
+    color: var(--micaText);
     background-color: rgb(148, 80, 80);
     opacity: .4;
 
@@ -31,14 +31,14 @@ body{
     pointer-events: none;
 }
 
-*{
+* {
     box-sizing: border-box;
     user-select: none;
 
     font-family: "Segoe UI Variable Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.micaFore{
+.micaFore {
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -49,11 +49,11 @@ body{
     transition: background-color .1s;
 }
 
-.micaFore:hover{
+.micaFore:hover {
     background-color: var(--micaForeHov);
 }
 
-.micaFore.selected{
+.micaFore.selected {
     background-color: var(--micaFore);
     border: 1px solid var(--micaBord);
 
@@ -62,12 +62,12 @@ body{
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.micaBase{
+.micaBase {
     background-color: var(--micaBack);
     color: var(--micaText);
 }
 
-.micaLabel{
+.micaLabel {
     font-size: 15px;
     font-weight: 500;
 
@@ -81,11 +81,11 @@ body{
 }
 
 @media (prefers-color-scheme: light) {
-    :root{
-        --backgroundImage: url("https://i.postimg.cc/knyRvbVv/Gradient-Light.png");
+    :root {
+        --backgroundImage: url("https://cdn.wallpaperhub.app/cloudcache/4/4/7/5/e/7/4475e73c885921925f61fcf123c7c8c1f93e1c0c.jpg");
 
         --micaBack: #f6f0f9;
-        --micaRest: rgba(255, 255, 255, .5);
+        --micaRest: rgba(255, 255, 255, .6);
         --micaFore: white;
         --micaForeHov: #e9e1ea;
         --micaText: black;
@@ -96,8 +96,8 @@ body{
 }
 
 @media (prefers-color-scheme: dark) {
-    :root{
-        --backgroundImage: url("https://i.postimg.cc/bvLPS8w1/Gradient-Dark.png");
+    :root {
+        --backgroundImage: url("https://cdn.wallpaperhub.app/cloudcache/9/1/5/4/b/5/9154b59c02887a5eb398be3dce7531b52295c9e9.jpg");
 
         --micaBack: #271a2f;
         --micaRest: rgba(70, 70, 70, 0.3);

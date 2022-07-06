@@ -1,106 +1,142 @@
 /* Sidebar ('grid') */
 
-.grid{
+.grid {
     display: flex;
     flex-direction: column;
 
-    overflow: hidden;
-
     position: absolute;
     z-index: 10;
-    inset: 0;
+    left: 0;
+    bottom: 0;
 
     background-color: var(--micaRest);
     backdrop-filter: blur(20px);
     color: var(--micaText);
-    border-right: 1px solid var(--micaBord);
+    /* border-right: 1px solid var(--micaBord); */
 
     width: 50px;
-    height: 100vh;
+    height: calc(100vh - 50px);
 
     transition: .25s width 1s, background-color .2s;
 }
 
-.grid:hover{
+.grid:hover {
     width: 200px;
-    background-color: var(--micaBack);
     transition: .25s width .01s, background-color .2s
+}
+
+.corner {
+    width: 10px;
+    height: 10px;
+
+    overflow: hidden;
+
+    position: absolute;
+    right: -10px;
+    top: 0px;
+}
+
+.corner::after {
+    content: "";
+
+    border-radius: 10px 0 0 0;
+    border: 4px solid var(--micaRest);
+    border-bottom: transparent;
+    border-right: transparent;
+
+    width: 5px;
+    height: 5px;
+
+    position: absolute;
+    left: -4px;
+    top: -4px;
 }
 
 /*  */
 
-/* Sidebar header ('gridTitle') */
+/* Simulated window chrome ('titlebar') */
 
-.gridTitle{
-    border-bottom: 1px solid var(--micaBord);
+.titlebar {
+    /* border-bottom: 1px solid var(--micaBord); */
+    background-color: var(--micaRest);
+    backdrop-filter: blur(20px);
 
     position: absolute;
     top: 0;
 
-    width: 200px;
-    height: 45px;
+    width: 100vw;
+    height: 50px;
 
     transition: .25s max-width 1s, background-color .2s;
 }
 
-.grid:hover .gridTitle{
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-    background-color: var(--micaFore);
-
-    transition: max-width .25s, background-color .2s;
-}
-
-.iconPackLabel{
-    min-width: max-content !important;
+.tbText {
+    display: flex;
+    gap: 2px;
 
     position: absolute;
-    left: 50px;
-    top: 6px;
+    left: 55px;
+    top: 12.5px;
+}
 
-    font-size: 23px;
-    font-weight: 700;
+.iconPackLabel {
+    min-width: max-content !important;
+
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI Variable Small';
     height: 21px;
 }
 
-.iconCount{
+.iconCount {
     min-width: max-content !important;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 900;
     opacity: .5;
-
-    position: absolute;
-    left: 150px;
-    top: 6px;
 
     text-transform: uppercase;
 }
 
-#gridIcon{
+#gridIcon {
     position: absolute;
     left: 13px;
     top: 50%;
     transform: translateY(-50%);
 
     font-size: 26px;
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s;
+}
+
+.giEx {
+    background-image: url("favicon/favicon-32x32.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: transparent;
 }
 
 /*  */
 
 /* Icons (sidebar buttons) */
 
-.iconContainer{
+.iconContainer {
     display: flex;
     flex-direction: column;
     gap: 5px;
     height: 100%;
 
-    margin-top: 45px;
+    /* margin-top: 45px; */
     padding: 5px 0;
     overflow: hidden scroll;
 }
 
-.button{
+.button {
     min-height: 40px;
     max-width: 200px;
     margin: 0 5px;
@@ -112,16 +148,16 @@
 
     background-size: 24px;
     background-repeat: no-repeat;
-    background-position: 6px center;
+    background-position: 7px center;
 }
 
-.button:active{
+.button:active {
     background-size: 17px;
 }
 
 /* Icon label */
 
-.button::before{
+.button::before {
     content: attr(data-iconName);
     font-size: 12px;
 
@@ -131,14 +167,14 @@
 
     position: absolute;
     bottom: 13px;
-    left: 43px;
+    left: 44px;
     text-align: left;
     text-overflow: ellipsis;
 }
 
 /* Icon - Misc properties */
 
-.button:nth-of-type(1){
+.button:nth-of-type(1) {
     display: none;
 }
 

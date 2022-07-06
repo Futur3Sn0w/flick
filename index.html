@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flick - Fluent Icons</title>
+    <title>Flick - Fluent Icon Directory</title>
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="globals.css">
@@ -20,54 +21,63 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-    <div class="versionInfo">v0.8.0</div>
 
-    <div class="largePreview" id="largePreview" data-iconName="No icon selected" data-labelShowing="y">
-        <div class="lpIcon" id="lrgPrev"></div>
-        <div class="lpLabel micaLabel" id="lpLabel">No icon selected</div>
-
-        <div class="previewButtons">
-            <div class="hoverBtn darkToggle micaFore" id="darkToggle">
-                <i class="fa-solid fa-circle-half-stroke"></i>
-            </div>
-        
-            <div class="hoverBtn moreInfoBtn micaFore" id="moreInfoBtn">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-        </div>
-        
-        <div class="alts" id="altBox">
-            <input type="radio" name="calendar" class="alt micaFore" id="alt1"></input>
-            <input type="radio" name="calendar" class="alt micaFore" id="alt2"></input>
-            <input type="radio" name="calendar" class="alt micaFore" id="alt3"></input>
-            <input type="radio" name="calendar" class="alt micaFore" id="alt4"></input>
-            <input type="radio" name="calendar" class="alt micaFore" id="alt5"></input>
-        </div>
-
-        <div class="iconInfo" id="iconInfo" data-menuShowing="n">
-            <div class="iconInfoContent" id="iconInfoContent">
-                <div class="infoHead">
-                    <div id="moreIconName"></div>
-                    <div id="moreIconClrMd">Light</div>
-                </div>
-                <div id="moreAltAmt">5 alts</div>
-                <div id="moreFirstSeen">First seen: 10X</div>
-            </div>
+    <div class="titlebar" id="gti">
+        <div class="versionInfo">v0.9.0</div>
+        <div id="gridIcon" class="fa-brands fa-microsoft giEx"></div>
+        <div class="tbText">
+            <div class="iconPackLabel" id="gv">Flick - (Unofficial) Fluent Icon Directory</div>
+            <div class="iconCount" id="gt"></div>
         </div>
     </div>
 
     <div class="grid" id="gridMain">
-        <div class="gridTitle" id="gti">
-            <i id="gridIcon" class="fa-brands fa-microsoft"></i>
-            <div class="iconPackLabel" id="gv">Windows</div>
-            <div class="iconCount" id="gt">51 icons</div>
-        </div>
+        <div class="corner"></div>
         <div class="iconContainer" id="gridSub">
             <div id="button" class="button micaFore" data-iconName=""></div>
         </div>
     </div>
 
+    <div class="contentView">
+        <div class="largePreview" id="largePreview" data-iconName="No icon selected" data-labelShowing="y">
+            <div class="lpIcon" id="lrgPrev"></div>
+            <div class="lpLabel micaLabel" id="lpLabel">No icon selected</div>
+
+            <div class="previewButtons">
+                <div class="hoverBtn darkToggle micaFore" id="darkToggle">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </div>
+
+                <div class="hoverBtn moreInfoBtn micaFore" id="moreInfoBtn">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="alts" id="altBox">
+                <input type="radio" name="calendar" class="alt micaFore" id="alt1"></input>
+                <input type="radio" name="calendar" class="alt micaFore" id="alt2"></input>
+                <input type="radio" name="calendar" class="alt micaFore" id="alt3"></input>
+                <input type="radio" name="calendar" class="alt micaFore" id="alt4"></input>
+                <input type="radio" name="calendar" class="alt micaFore" id="alt5"></input>
+            </div>
+
+            <div class="iconInfo" id="iconInfo" data-menuShowing="n">
+                <div class="iconInfoContent" id="iconInfoContent">
+                    <div class="infoHead">
+                        <div id="moreIconName"></div>
+                        <div id="moreIconClrMd">Light</div>
+                    </div>
+                    <div id="moreAltAmt">5 alts</div>
+                    <div id="moreFirstSeen">First seen: 10X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="iconatts.js"></script>
 </body>
+
 </html>

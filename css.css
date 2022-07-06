@@ -1,6 +1,6 @@
 /* 'Hero' box (Large Preview) */
 
-.largePreview{
+.largePreview {
     width: fit-content;
     height: fit-content;
     padding: 20px;
@@ -18,11 +18,11 @@
     z-index: 4;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     transition: background-size .3s, background-position .3s, background-image .1s, height 1s;
 }
 
-.lpLabel{
+.lpLabel {
     position: absolute;
     top: -55px;
     left: 50%;
@@ -32,12 +32,12 @@
     transition: opacity .2s, transform .2s;
 }
 
-.lpLabel.labelHide{
+.lpLabel.labelHide {
     opacity: 0;
     transform: translate(-50%, 10px);
 }
 
-.lpIcon{
+.lpIcon {
     background-image: url('iconimgs/Explorer/Badges/help.png');
 
     background-size: 256px;
@@ -54,7 +54,7 @@
 
 /* Icon revisions ("alts") */
 
-.alts{
+.alts {
     margin-top: 20px;
     display: none;
     gap: 5px;
@@ -62,7 +62,7 @@
     justify-content: center;
 }
 
-.alt{
+.alt {
     width: 80px;
     aspect-ratio: 1/1;
 
@@ -80,12 +80,12 @@
     transition: background-size .2s, background-position .2s, background-image .1s, background-color .2s !important;
 }
 
-.alt:active{
+.alt:active {
     background-size: 80px;
     background-position: center -70px;
 }
 
-.alt::after{
+.alt::after {
     content: attr(data-altTooltip);
 
     background-color: var(--micaFore);
@@ -104,7 +104,7 @@
     transition: .2s opacity 0s, .2s top 0s;
 }
 
-.alt:hover::after{
+.alt:hover::after {
     opacity: 1;
     top: -35px;
     transition: .2s opacity 1s, .2s top 1s;
@@ -114,7 +114,7 @@
 
 /* Icon 'more info' overlay */
 
-.iconInfo{
+.iconInfo {
     width: 100%;
     height: 100%;
 
@@ -136,7 +136,7 @@
     transition: opacity .2s, padding-bottom .2s, height .3s;
 }
 
-.iconInfoContent{
+.iconInfoContent {
     max-width: 100%;
     width: max-content;
     height: max-content;
@@ -149,13 +149,13 @@
     justify-content: center;
 }
 
-.infoHead{
+.infoHead {
     display: flex;
     position: relative;
     margin-bottom: 7px;
 }
 
-.infoHead::after{
+.infoHead::after {
     content: "";
     width: 100vw;
     height: 1px;
@@ -168,14 +168,14 @@
     background-color: var(--micaBord);
 }
 
-#moreIconName{
+#moreIconName {
     font-size: 30px;
     word-wrap: normal;
     width: max-content;
     font-weight: 700;
 }
 
-#moreIconClrMd{
+#moreIconClrMd {
     opacity: .4;
     font-weight: 700;
     font-size: 14px;
@@ -183,14 +183,14 @@
 }
 
 #moreAltAmt,
-#moreFirstSeen{
+#moreFirstSeen {
     font-size: 18px;
     padding-left: 10px;
     position: relative;
 }
 
 #moreAltAmt::after,
-#moreFirstSeen::after{
+#moreFirstSeen::after {
     content: "";
     width: 5px;
     height: 5px;
@@ -209,7 +209,7 @@
 
 /* Bubble buttons on Large Preview */
 
-.previewButtons{
+.previewButtons {
     display: flex;
     gap: 5px;
 
@@ -218,7 +218,7 @@
     right: -20px;
 }
 
-.hoverBtn{
+.hoverBtn {
     width: 34px;
     aspect-ratio: 1/1;
 
