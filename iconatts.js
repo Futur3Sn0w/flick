@@ -42,6 +42,20 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "companyportal",
+    "darkMode": "no",
+    "friendlyName": "Company Portal",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "dynamics365layout",
+    "darkMode": "no",
+    "friendlyName": "Dynamics 365 Layout",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "familysafetymonitor",
     "darkMode": "no",
     "friendlyName": "Family Safety Monitor",
@@ -140,6 +154,13 @@ const icons = [
     "hasAlts": "1"
   },
   {
+    "pathID": "microsoftmaquette",
+    "darkMode": "no",
+    "friendlyName": "Microsoft Maquette",
+    "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "microsofttodo",
     "darkMode": "no",
     "friendlyName": "Microsoft To Do",
@@ -151,6 +172,13 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "Microsoft Edge",
     "firstSeen": "2019",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "microsoftemulator",
+    "darkMode": "no",
+    "friendlyName": "Microsoft Emulator",
+    "firstSeen": "10",
     "hasAlts": "0"
   },
   {
@@ -242,7 +270,7 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "Photos",
     "firstSeen": "10X",
-    "hasAlts": "2"
+    "hasAlts": "3"
   },
   {
     "pathID": "powerautomate",
@@ -276,6 +304,13 @@ const icons = [
     "pathID": "quickassist",
     "darkMode": "no",
     "friendlyName": "Quick Assist",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "reactnativegallery",
+    "darkMode": "no",
+    "friendlyName": "React Native Gallery",
     "firstSeen": "11",
     "hasAlts": "0"
   },
@@ -322,6 +357,13 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "sysinternalssuite",
+    "darkMode": "no",
+    "friendlyName": "Sysinternals Suite",
+    "firstSeen": "95",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "teams",
     "darkMode": "no",
     "friendlyName": "Teams",
@@ -364,10 +406,24 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "warehousemanagement",
+    "darkMode": "no",
+    "friendlyName": "Warehouse Management",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "weather",
     "darkMode": "no",
     "friendlyName": "Weather",
     "firstSeen": "10X",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "windows365",
+    "darkMode": "no",
+    "friendlyName": "Windows 365",
+    "firstSeen": "11",
     "hasAlts": "0"
   },
   {
@@ -389,6 +445,20 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "Windows File Recovery",
     "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "winuigallery",
+    "darkMode": "no",
+    "friendlyName": "WinUI 2/3 Gallery",
+    "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "windowstools",
+    "darkMode": "no",
+    "friendlyName": "Windows Tools (Control Panel)",
+    "firstSeen": "11",
     "hasAlts": "0"
   },
   {
@@ -608,18 +678,3 @@ allAlts.forEach(alt => {
     previewBox.style.backgroundPosition = "50%";
   }
 });
-
-// Icon loop
-
-var vi = document.getElementById('gridIcon');
-var icon = true;
-
-setInterval(function () {
-  if (icon == true) {
-    vi.classList.add('giEx');
-    icon = !icon;
-  } else {
-    vi.classList.remove('giEx');
-    icon = !icon;
-  }
-}, 5000);

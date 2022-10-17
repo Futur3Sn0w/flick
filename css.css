@@ -22,21 +22,6 @@
     transition: background-size .3s, background-position .3s, background-image .1s, height 1s;
 }
 
-.lpLabel {
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, 0);
-
-    transition: opacity .2s, transform .2s;
-}
-
-.lpLabel.labelHide {
-    opacity: 0;
-    transform: translate(-50%, 10px);
-}
-
 .lpIcon {
     background-image: url('iconimgs/Explorer/Badges/help.png');
 
@@ -119,6 +104,7 @@
     height: 100%;
 
     background-color: var(--micaBack);
+    color: var(--micaText);
     border-radius: 10px;
 
     position: absolute;

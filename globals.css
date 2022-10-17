@@ -19,13 +19,10 @@ body {
     z-index: 1000;
 
     padding: 3px 6px;
-    border-radius: 100px;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--micaText);
-    background-color: rgb(148, 80, 80);
-    opacity: .4;
 
     user-select: none;
     pointer-events: none;
@@ -84,12 +81,13 @@ body {
     :root {
         --backgroundImage: url("https://cdn.wallpaperhub.app/cloudcache/4/4/7/5/e/7/4475e73c885921925f61fcf123c7c8c1f93e1c0c.jpg");
 
-        --micaBack: #f6f0f9;
-        --micaRest: rgba(255, 255, 255, .6);
+        --micaBack: rgba(255, 255, 255, 0.9);
+        --micaRest: rgba(255, 255, 255, .75);
         --micaFore: white;
-        --micaForeHov: #e9e1ea;
+        --micaForeHov: rgba(255, 255, 255, 0.75);
         --micaText: black;
-        --micaBord: #ddd5da;
+        --micaBord: #ffffff;
+        --micaInv: rgba(0, 0, 0, .1);
 
         --heroIconPlateColor: rgba(255, 255, 255, .65);
     }
@@ -105,6 +103,7 @@ body {
         --micaForeHov: #362737;
         --micaText: white;
         --micaBord: #51434a;
+        --micaInv: rgba(255, 255, 255, 0.15);
 
         --heroIconPlateColor: rgba(48, 48, 48, .7);
     }
