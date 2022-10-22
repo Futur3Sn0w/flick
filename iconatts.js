@@ -140,6 +140,27 @@ const icons = [
     "hasAlts": "1"
   },
   {
+    "pathID": "microsoftedge",
+    "darkMode": "no",
+    "friendlyName": "Microsoft Edge",
+    "firstSeen": "2019",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "microsoftemulator",
+    "darkMode": "no",
+    "friendlyName": "Microsoft Emulator",
+    "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "microsoftmaquette",
+    "darkMode": "no",
+    "friendlyName": "Microsoft Maquette",
+    "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "microsoftnews",
     "darkMode": "no",
     "friendlyName": "Microsoft News",
@@ -154,30 +175,9 @@ const icons = [
     "hasAlts": "1"
   },
   {
-    "pathID": "microsoftmaquette",
-    "darkMode": "no",
-    "friendlyName": "Microsoft Maquette",
-    "firstSeen": "10",
-    "hasAlts": "0"
-  },
-  {
     "pathID": "microsofttodo",
     "darkMode": "no",
     "friendlyName": "Microsoft To Do",
-    "firstSeen": "10",
-    "hasAlts": "0"
-  },
-  {
-    "pathID": "microsoftedge",
-    "darkMode": "no",
-    "friendlyName": "Microsoft Edge",
-    "firstSeen": "2019",
-    "hasAlts": "0"
-  },
-  {
-    "pathID": "microsoftemulator",
-    "darkMode": "no",
-    "friendlyName": "Microsoft Emulator",
     "firstSeen": "10",
     "hasAlts": "0"
   },
@@ -249,6 +249,13 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "Paint 3D",
     "firstSeen": "10X",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "mspcmanager",
+    "darkMode": "no",
+    "friendlyName": "PC Manager",
+    "firstSeen": "11",
     "hasAlts": "0"
   },
   {
@@ -427,6 +434,13 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "winfr",
+    "darkMode": "no",
+    "friendlyName": "Windows File Recovery",
+    "firstSeen": "10",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "windowssecurity",
     "darkMode": "no",
     "friendlyName": "Windows Security",
@@ -441,10 +455,10 @@ const icons = [
     "hasAlts": "0"
   },
   {
-    "pathID": "winfr",
+    "pathID": "windowstools",
     "darkMode": "no",
-    "friendlyName": "Windows File Recovery",
-    "firstSeen": "10",
+    "friendlyName": "Windows Tools (Control Panel)",
+    "firstSeen": "11",
     "hasAlts": "0"
   },
   {
@@ -452,13 +466,6 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "WinUI 2/3 Gallery",
     "firstSeen": "10",
-    "hasAlts": "0"
-  },
-  {
-    "pathID": "windowstools",
-    "darkMode": "no",
-    "friendlyName": "Windows Tools (Control Panel)",
-    "firstSeen": "11",
     "hasAlts": "0"
   },
   {
