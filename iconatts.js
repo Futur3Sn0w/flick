@@ -32,7 +32,7 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "ClipChamp",
     "firstSeen": "11",
-    "hasAlts": "0"
+    "hasAlts": "1"
   },
   {
     "pathID": "clock",
@@ -45,6 +45,13 @@ const icons = [
     "pathID": "companyportal",
     "darkMode": "no",
     "friendlyName": "Company Portal",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
+    "pathID": "devhome",
+    "darkMode": "no",
+    "friendlyName": "Dev Home (Preview)",
     "firstSeen": "11",
     "hasAlts": "0"
   },
@@ -434,6 +441,13 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "windowsbackup",
+    "darkMode": "no",
+    "friendlyName": "Windows Backup",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "winfr",
     "darkMode": "no",
     "friendlyName": "Windows File Recovery",
@@ -519,14 +533,21 @@ icons.forEach(function (iconInd, index) {
     localStorage.setItem('lightImg', 'background-image: url("iconimgs/' + iconInd["pathID"] + '.png")');
     localStorage.setItem('darkImg', 'background-image: url("iconimgs/' + iconInd["darkMode"] + '.png")');
     previewBox.setAttribute('data-iconName', iconInd["friendlyName"]);
-    lpLabel.innerText = iconInd["friendlyName"];
     previewBox.setAttribute('data-darkMode', clone.getAttribute('data-darkMode'));
+
+    moreMenu.style.opacity = "1";
+    moreMenu.style.zIndex = "10";
+    moreMenu.style.paddingBottom = "0";
+    moreMenu.setAttribute('data-menuShowing', "y");
+    previewBox.setAttribute('data-labelShowing', "y");
 
     document.getElementById('moreIconName').innerText = iconInd["friendlyName"];
     document.getElementById('moreAltAmt').innerText = iconInd['hasAlts'] + " revision(s)"
     document.getElementById('moreFirstSeen').innerText = "First seen: " + iconInd['firstSeen'];
 
     moreBtn.style.display = "flex";
+
+    infoBox.classList.add('select');
 
     var ccResult = iconInd['pathID'];
     var convResult = ccResult.replace(/([A-Z])/g, " $1");
@@ -607,6 +628,8 @@ icons.forEach(function (iconInd, index) {
       darkToggle.style.display = "flex";
       document.getElementById('moreIconClrMd').style.display = "flex";
     }
+
+
   };
 
   var showDarkIcon = false;
@@ -642,35 +665,11 @@ window.onclick = (e) => {
 var moreBtn = document.getElementById('moreInfoBtn');
 var moreMenu = document.getElementById('iconInfo');
 
-moreBtn.onclick = function () {
-  if (moreMenu.getAttribute('data-menuShowing') == "n") {
-    moreBtn.innerHTML = '<i class="fa-solid fa-close"></i>'
-    moreMenu.style.opacity = "1";
-    moreMenu.style.zIndex = "10";
-    moreMenu.style.paddingBottom = "0";
-    moreMenu.setAttribute('data-menuShowing', "y");
-    previewBox.setAttribute('data-labelShowing', "n");
-    labelToggle();
-  } else {
-    moreBtn.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>'
-    moreMenu.style.opacity = "0";
-    moreMenu.style.zIndex = "-10";
-    moreMenu.style.paddingBottom = "30px";
-    moreMenu.setAttribute('data-menuShowing', "n");
-    previewBox.setAttribute('data-labelShowing', "y");
-    labelToggle();
-  }
-}
-
-var lpLabel = document.getElementById('lpLabel');
-
-function labelToggle() {
-  if (previewBox.getAttribute('data-labelShowing') == "n") {
-    lpLabel.classList.add('labelHide');
-  } else {
-    lpLabel.classList.remove('labelHide');
-  }
-}
+moreMenu.style.opacity = "1";
+moreMenu.style.zIndex = "10";
+moreMenu.style.paddingBottom = "0";
+moreMenu.setAttribute('data-menuShowing', "y");
+previewBox.setAttribute('data-labelShowing', "y");
 
 // 'Swap' animation for Large Preview
 

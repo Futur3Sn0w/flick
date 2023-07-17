@@ -2,12 +2,14 @@
 
 .grid {
     display: flex;
-    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
 
-    position: absolute;
+    /* position: absolute; */
     z-index: 10;
-    left: 5px;
-    bottom: 5px;
+    /* left: 5px; */
+    /* bottom: 5px; */
 
     background-color: var(--micaRest);
     backdrop-filter: blur(40px);
@@ -15,8 +17,12 @@
     /* border-top: 1px solid var(--micaBord); */
     border-radius: 9px;
 
-    height: 60px;
-    width: calc(100vw - 10px);
+    height: 100%;
+    /* max-height: calc(100vh - 60px); */
+    /* width: auto; */
+    width: 100%;
+    /* max-width: 50vw; */
+    min-width: 200px;
 
     transition: .25s width 1s, background-color .2s;
 }
@@ -32,33 +38,6 @@
     display: none;
 }
 
-.corner {
-    width: 10px;
-    height: 10px;
-
-    overflow: hidden;
-
-    position: absolute;
-    right: -10px;
-    top: 0px;
-}
-
-.corner::after {
-    content: "";
-
-    border-radius: 10px 0 0 0;
-    border: 4px solid var(--micaRest);
-    border-bottom: transparent;
-    border-right: transparent;
-
-    width: 5px;
-    height: 5px;
-
-    position: absolute;
-    left: -4px;
-    top: -4px;
-}
-
 /*  */
 
 /* Simulated window chrome ('titlebar') */
@@ -69,6 +48,7 @@
 
     position: absolute;
     top: 0;
+    /* left: 0; */
 
     width: 100vw;
     height: 50px;
@@ -85,35 +65,15 @@
     align-items: center;
     justify-content: center;
     gap: 3px;
+    /* margin-right: auto; */
+    /* margin-left: 5px; */
 
     background-color: var(--micaRest);
     border-radius: 500px;
     height: 40px;
-}
 
-.lpLabel {
-    position: relative;
-    z-index: 2;
-    /* top: -55px; */
-    /* left: 50%; */
-    /* transform: translate(-50%, 0); */
-
-    transition: opacity .2s, transform .2s;
-
-    font-size: 15px;
-    font-weight: 400;
-
-    background-color: var(--micaFore);
-    color: var(--micaText);
-    border-radius: 50px;
-
-    width: max-content;
-    height: 100%;
-    padding: 0 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: fit-content;
+    padding-right: 2px;
 }
 
 .tbText {
@@ -136,8 +96,8 @@
 
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Segoe UI Variable Small';
-    height: 21px;
+    font-family: 'Segoe UI Variable';
+    height: 20px;
 }
 
 .iconCount {
@@ -154,28 +114,23 @@
     background-image: url("favicon/favicon-32x32.png");
     background-size: 23px;
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 7px center;
     color: transparent;
 
-    position: relative;
-    z-index: 1;
-    /* left: 13px; */
-    /* top: 50%; */
-    transform: translateX(20px);
-    border-radius: 50px 0 0 50px;
+    border-radius: 50px;
 
     font-size: 26px;
 
-    width: 55px !important;
+    width: 36px;
     height: 36px;
 
     display: flex;
-    width: fit-content;
     align-items: center;
     justify-content: center;
 
+    margin-left: 15px;
     background-color: var(--micaInv);
-    padding: 10px !important;
+    /* padding: 10px !important; */
 
     transition: .3s;
 }
@@ -186,21 +141,24 @@
 
 .iconContainer {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    /* align-items: center; */
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 30px 20px;
 
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
 
     /* margin-top: 45px; */
-    overflow: scroll hidden;
-    padding: 5px;
+    overflow: hidden scroll;
+    padding: 10px;
+    padding-bottom: 40px;
 }
 
 .button {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
 
     transition: opacity .3s, background-size .2s, background-color .2s !important;
 
@@ -211,13 +169,13 @@
 
     /* overflow: hidden; */
 
-    background-size: 30px;
+    background-size: 60px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button:active {
-    background-size: 20px;
+    background-size: 55px;
 }
 
 .button:hover {
@@ -274,17 +232,18 @@
 /* Icon label */
 
 .button::before {
-    /* content: attr(data-iconName); */
+    content: attr(data-iconName);
     font-size: 12px;
 
-    width: 135px;
+    width: 90px;
     overflow: hidden;
     white-space: nowrap;
 
     position: absolute;
-    bottom: 13px;
-    left: 44px;
-    text-align: left;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     text-overflow: ellipsis;
 }
 

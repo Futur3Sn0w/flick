@@ -1,9 +1,10 @@
 /* 'Hero' box (Large Preview) */
 
 .largePreview {
-    width: fit-content;
-    height: fit-content;
+    width: 400px;
+    height: 100%;
     padding: 20px;
+    flex-shrink: 0;
 
     background-color: var(--heroIconPlateColor);
     backdrop-filter: blur(20px) saturate(250%);
@@ -14,11 +15,7 @@
     align-items: center;
     justify-content: center;
 
-    position: absolute;
     z-index: 4;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -40%);
     transition: background-size .3s, background-position .3s, background-image .1s, height 1s;
 }
 
@@ -32,6 +29,11 @@
     min-width: 256px;
     min-height: 256px;
 
+    width: fit-content;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+
     transition: background-size .3s, background-position .3s, background-image .1s;
 }
 
@@ -40,11 +42,14 @@
 /* Icon revisions ("alts") */
 
 .alts {
-    margin-top: 20px;
     display: none;
     gap: 5px;
     align-items: center;
     justify-content: center;
+
+    /* position: absolute; */
+    /* bottom: 10px; */
+    margin-bottom: 5px;
 }
 
 .alt {
@@ -70,51 +75,22 @@
     background-position: center -70px;
 }
 
-.alt::after {
-    content: attr(data-altTooltip);
-
-    background-color: var(--micaFore);
-    color: var(--micaText);
-    padding: 3px 8px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 4px;
-
-    position: absolute;
-    top: 0;
-    z-index: -10;
-
-    opacity: 0;
-
-    transition: .2s opacity 0s, .2s top 0s;
-}
-
-.alt:hover::after {
-    opacity: 1;
-    top: -35px;
-    transition: .2s opacity 1s, .2s top 1s;
-}
-
 /*  */
 
 /* Icon 'more info' overlay */
 
 .iconInfo {
     width: 100%;
-    height: 100%;
+    height: fit-content;
 
     background-color: var(--micaBack);
     color: var(--micaText);
     border-radius: 10px;
 
-    position: absolute;
-    z-index: -10;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+    opacity: 1;
+    padding-bottom: 0;
 
-    DISPLAY: FLEX;
+    display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
@@ -123,16 +99,24 @@
 }
 
 .iconInfoContent {
-    max-width: 100%;
-    width: max-content;
+    width: 100%;
     height: max-content;
-    padding: 13px 20px;
+    max-height: 50px;
+    padding: 10px 10px 5px 10px;
 
     overflow: clip;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.iconInfoContent.select {
+    max-height: 200px;
+    padding: 13px 20px;
 }
 
 .infoHead {
@@ -141,23 +125,16 @@
     margin-bottom: 7px;
 }
 
-.infoHead::after {
-    content: "";
-    width: 100vw;
-    height: 1px;
-
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background-color: var(--micaBord);
+.iconInfoContent.select #moreAltAmt,
+.iconInfoContent.select #moreFirstSeen {
+    opacity: 1;
 }
 
 #moreIconName {
     font-size: 30px;
     word-wrap: normal;
-    width: max-content;
+    width: 100%;
+    height: fit-content;
     font-weight: 700;
 }
 
@@ -173,6 +150,7 @@
     font-size: 18px;
     padding-left: 10px;
     position: relative;
+    opacity: 0;
 }
 
 #moreAltAmt::after,
@@ -200,8 +178,8 @@
     gap: 5px;
 
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 5px;
+    right: 5px;
 }
 
 .hoverBtn {
@@ -215,6 +193,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+}
+
+#moreInfoBtn {
+    display: none !important;
 }
 
 /*  */
