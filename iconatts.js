@@ -49,6 +49,13 @@ const icons = [
     "hasAlts": "0"
   },
   {
+    "pathID": "copilotpreview",
+    "darkMode": "no",
+    "friendlyName": "Copilot Preview",
+    "firstSeen": "11",
+    "hasAlts": "0"
+  },
+  {
     "pathID": "devhome",
     "darkMode": "no",
     "friendlyName": "Dev Home (Preview)",
@@ -147,6 +154,13 @@ const icons = [
     "hasAlts": "1"
   },
   {
+    "pathID": "office",
+    "darkMode": "no",
+    "friendlyName": "Microsoft 365",
+    "firstSeen": "2018",
+    "hasAlts": "1"
+  },
+  {
     "pathID": "microsoftedge",
     "darkMode": "no",
     "friendlyName": "Microsoft Edge",
@@ -221,13 +235,6 @@ const icons = [
     "darkMode": "no",
     "friendlyName": "Notepad",
     "firstSeen": "10X",
-    "hasAlts": "0"
-  },
-  {
-    "pathID": "office",
-    "darkMode": "no",
-    "friendlyName": "Office",
-    "firstSeen": "2018",
     "hasAlts": "0"
   },
   {

@@ -123,6 +123,7 @@
     display: flex;
     position: relative;
     margin-bottom: 7px;
+    width: max-content;
 }
 
 .iconInfoContent.select #moreAltAmt,
@@ -136,6 +137,7 @@
     width: 100%;
     height: fit-content;
     font-weight: 700;
+    width: max-content;
 }
 
 #moreIconClrMd {
@@ -143,6 +145,7 @@
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
+    width: max-content;
 }
 
 #moreAltAmt,
